@@ -1,0 +1,37 @@
+{
+  "rf_raw": {
+    "correlations": {
+      "severity": {
+        "pearson": 0.8628197115230493,
+        "spearman": 0.8100617338949581
+      },
+      "persistence": {
+        "pearson": 0.8992366492191154,
+        "spearman": 0.860664276427873
+      },
+      "recovery_gap": {
+        "pearson": 0.8780419904965711,
+        "spearman": 0.7911814858316797
+      }
+    },
+    "n_features": 104
+  },
+  "rf_pca": {
+    "correlations": {
+      "severity": {
+        "pearson": 0.813613504871238,
+        "spearman": 0.7797441968065459
+      },
+      "persistence": {
+        "pearson": 0.863224342484358,
+        "spearman": 0.8329470212483782
+      },
+      "recovery_gap": {
+        "pearson": 0.8384953086451062,
+        "spearman": 0.7656363955730058
+      }
+    },
+    "n_components": 14,
+    "explained_variance": 0.9539914131164551
+  }
+}

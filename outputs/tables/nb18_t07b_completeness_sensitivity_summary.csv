@@ -1,0 +1,5 @@
+threshold,k_classes,n_cells,pct_cells_retained,spearman_vs_any,min_class_retention,max_class_retention
+any valid observation,10,1820692,100.0,0.9999999999999999,100.0,100.0
+>= 6 valid months in both years,10,1820692,100.0,0.9999999999999999,100.0,100.0
+>= 9 valid months in both years,10,1820692,100.0,0.9999999999999999,100.0,100.0
+all 12 months in both years,10,1693839,93.03270404879024,0.9151515151515152,73.90163051708761,99.7482456488126

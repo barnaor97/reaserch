@@ -1,0 +1,5 @@
+indicator,spearman_pixel_vs_unit_target,spearman_pixel_vs_unit_model,max_abs_change_in_class_mean,pixel_ordering,unit_ordering
+severity,0.880952380952381,0.9285714285714287,0.07575240731239319,grassland > shrubland > fallow > forest > bare > built-up > cropland > orchards,fallow > shrubland > grassland > forest > built-up > bare > cropland > orchards
+persistence,0.9047619047619048,0.9285714285714287,0.05386596918106079,bare > shrubland > forest > fallow > grassland > cropland > built-up > orchards,shrubland > bare > forest > cropland > fallow > grassland > built-up > orchards
+recovery_gap,0.9285714285714287,0.9285714285714287,0.11559349298477173,grassland > fallow > shrubland > cropland > bare > built-up > forest > orchards,fallow > grassland > shrubland > bare > cropland > forest > built-up > orchards
+recurrence,0.7619047619047621,0.5952380952380953,0.018430396914482117,fallow > grassland > shrubland > orchards > cropland > bare > forest > built-up,fallow > grassland > bare > shrubland > cropland > forest > orchards > built-up

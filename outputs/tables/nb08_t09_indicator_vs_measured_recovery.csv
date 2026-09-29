@@ -1,0 +1,9 @@
+class_set,n_classes,compared_with,column,spearman_vs_recovery_gap
+all,9,relative NBR loss still outstanding at year 2,rel_loss_y2,0.2333333333333333
+all,9,% of pixels still below pre-fire NBR at year 2,pct_still_below_pre_y2,0.19999999999999998
+all,9,absolute NBR drop at year 2,abs_drop_y2,0.33333333333333337
+all,9,pre-fire NBR level (the indicator's own denominator),pre_fire_NBR,-0.16666666666666669
+vegetated,7,relative NBR loss still outstanding at year 2,rel_loss_y2,0.03571428571428572
+vegetated,7,% of pixels still below pre-fire NBR at year 2,pct_still_below_pre_y2,0.07142857142857144
+vegetated,7,absolute NBR drop at year 2,abs_drop_y2,0.21428571428571433
+vegetated,7,pre-fire NBR level (the indicator's own denominator),pre_fire_NBR,-0.5357142857142858

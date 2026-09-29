@@ -1,0 +1,53 @@
+{
+  "experiment_name": "exp12_tempcnn_baseline",
+  "burned_detection": {
+    "auc": 0.9971940895084399,
+    "threshold": 0.5566331658291458,
+    "precision": 0.8248226024117365,
+    "recall": 0.7489228823273647,
+    "f1": 0.785042469442718,
+    "confusion_matrix": [
+      [
+        9523714,
+        8048
+      ],
+      [
+        12704,
+        37894
+      ]
+    ]
+  },
+  "correlations": {
+    "severity": {
+      "pearson": 0.7451575994491577,
+      "pearson_pvalue": 0.0,
+      "spearman": 0.6628358254087615,
+      "spearman_pvalue": 0.0
+    },
+    "persistence": {
+      "pearson": 0.5024495720863342,
+      "pearson_pvalue": 0.0,
+      "spearman": 0.4440034777798363,
+      "spearman_pvalue": 0.0
+    },
+    "recovery_gap": {
+      "pearson": 0.6633979678153992,
+      "pearson_pvalue": 0.0,
+      "spearman": 0.5933781617617258,
+      "spearman_pvalue": 0.0
+    }
+  },
+  "per_category": null,
+  "model_info": {
+    "architecture": "TempCNNModel",
+    "n_parameters": 198788,
+    "epochs_trained": 50,
+    "best_val_auc": 0.9974068781972563,
+    "loss_type": "MaskedMultiTaskLoss"
+  },
+  "data_info": {
+    "n_train": 426245,
+    "n_val": 91338,
+    "n_test": 91339
+  }
+}

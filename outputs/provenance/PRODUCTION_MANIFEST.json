@@ -1,0 +1,56 @@
+{
+ "grid": {
+  "width": 4875,
+  "height": 7794,
+  "crs": "EPSG:32636",
+  "origin": [
+   620610,
+   3514560
+  ],
+  "res": 10
+ },
+ "eligible_cells": 16912470,
+ "predicted_cells": 16912470,
+ "tiles": 620,
+ "tile_size": 256,
+ "checkpoint_sha256": "e147da5725c719be82146a9e702ab46b02f850172c44439d38e758248595a26e",
+ "scaler_sha256": "d063382f34698cb7acc2276e3c87783e76815bc8bdfc29e9d64a9efe56316547",
+ "months": 108,
+ "model_features": 52,
+ "threshold": 0.502,
+ "layer_sha256": {
+  "severity": "7f07c6147bfe9fdbd04346ef6ee689da1153ddece4dfbda8a80c48dd3d26956e",
+  "persistence": "8c537c5a76775b062888ba81b4d41c7d0522c6132c2a9bde04009c5fa7901419",
+  "recovery_gap": "bacfb2f944d412868e201dc7cdbea6325d1431133c10d528d0f434b707c3b343",
+  "burned_prob": "f86f0044e3ece283c6a3f9b203733be0a0775f290d11c87d4634666c276cfaf2",
+  "model_recurrence": "43d8114628d0fe5fc7c8f8b5a727ae89cae5b70044a905ee1808fb3ea3e46622"
+ },
+ "layer_stats": {
+  "severity": {
+   "n_finite": 16912470,
+   "vmin": 6.6934022768805335e-09,
+   "vmax": 0.9998946189880371
+  },
+  "persistence": {
+   "n_finite": 16912470,
+   "vmin": 0.013015239499509335,
+   "vmax": 0.9966500401496887
+  },
+  "recovery_gap": {
+   "n_finite": 16912470,
+   "vmin": 1.9306193796420068e-11,
+   "vmax": 0.9998111128807068
+  },
+  "burned_prob": {
+   "n_finite": 16912470,
+   "vmin": 0.002295450074598193,
+   "vmax": 0.9871916770935059
+  },
+  "model_recurrence": {
+   "n_finite": 16912470,
+   "vmin": 0.0,
+   "vmax": 1.0
+  }
+ },
+ "qa_pass": true
+}

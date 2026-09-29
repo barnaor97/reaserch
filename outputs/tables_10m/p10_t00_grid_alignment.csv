@@ -1,0 +1,8 @@
+layer,file,shape,crs,ok
+severity,severity_10m.tif,7794x4875,EPSG:32636,True
+persistence,persistence_10m.tif,7794x4875,EPSG:32636,True
+recovery_gap_predicted,recovery_gap_10m.tif,7794x4875,EPSG:32636,True
+model_recurrence,model_recurrence_10m.tif,7794x4875,EPSG:32636,True
+burned_prob,burned_prob_10m.tif,7794x4875,EPSG:32636,True
+land_cover_2018,landcover_2018_10m.tif,7794x4875,EPSG:32636,True
+observed_NBR,nbr_2017_2025_10m.tif,7794x4875,EPSG:32636,True

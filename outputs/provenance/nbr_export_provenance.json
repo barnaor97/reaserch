@@ -1,0 +1,41 @@
+{
+ "written": "2026-09-27T11:59:40Z",
+ "project": os.environ.get("GEE_PROJECT", "YOUR-GEE-PROJECT"),
+ "bands": [
+  "NBR_2017_mean",
+  "NBR_2025_mean",
+  "n_valid_months_2017",
+  "n_valid_months_2025"
+ ],
+ "crs": "EPSG:32636",
+ "crs_transform": [
+  30,
+  0,
+  620610,
+  0,
+  -30,
+  3514560
+ ],
+ "dimensions": [
+  1625,
+  2598
+ ],
+ "nodata": -9999.0,
+ "clear_thresh": 0.6,
+ "s2_collection": "COPERNICUS/S2_SR_HARMONIZED",
+ "cloud_collection": "GOOGLE/CLOUD_SCORE_PLUS/V1/S2_HARMONIZED",
+ "roi_asset": "projects/YOUR-GEE-PROJECT/assets/gaza_envelope_for_decell_Dissolve",
+ "infra_asset": "projects/YOUR-GEE-PROJECT/assets/human_infrastructure_mask_utm36n",
+ "nbr": "normalizedDifference(B8,B12) on the monthly mean composite",
+ "imputation": "NONE \u2014 valid observations only, unlike the training series",
+ "native_grid_for_aggregation": [
+  10,
+  0,
+  620610,
+  0,
+  -10,
+  3514560
+ ],
+ "aggregation": "reduceResolution(mean) from 10 m to 30 m, 9 nested cells",
+ "ee_version": "1.7.45"
+}

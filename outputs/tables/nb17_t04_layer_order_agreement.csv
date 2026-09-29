@@ -1,0 +1,4 @@
+comparison,k_classes,spearman_of_class_means,pearson_of_class_means,ordering_identical
+A observed loss  vs  B analytical RG,9,0.7999999999999999,0.858935545860536,False
+B analytical RG  vs  C model RG,9,1.0,0.9996560643899396,True
+A observed loss  vs  C model RG,9,0.7999999999999999,0.8607730136857241,False

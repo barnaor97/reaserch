@@ -1,0 +1,5 @@
+group,n,pct_of_fire_affected
+A: last fire inside the 2025 assessment window,817,0.2769435197928178
+B: at least one fire inside the 2017 reference window,15129,5.128370270435178
+A and B (overlap),0,0.0
+A or B (union),15946,5.4053137902279955

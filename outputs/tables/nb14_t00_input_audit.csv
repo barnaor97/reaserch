@@ -1,0 +1,11 @@
+input,role,present,rows_x_cols,crs,pixel_m,on_inference_grid,finite_px,min,mean,max,sha256_head_tail,detail
+outputs/inference_full_roi/severity_30m.tif,severity,True,2598 x 1625,EPSG:32636,30.0,True,1821388.0,0.0013590544695034623,0.2734741491979854,0.9970736503601074,e5e66e61a567f18d,model output (Notebook 07b)
+outputs/inference_full_roi/persistence_30m.tif,persistence,True,2598 x 1625,EPSG:32636,30.0,True,1821388.0,0.04103732854127884,0.5091802473740767,0.9809949994087219,e319beeb8dff6930,model output (Notebook 07b)
+outputs/inference_full_roi/recovery_gap_30m.tif,recovery_gap,True,2598 x 1625,EPSG:32636,30.0,True,1821388.0,6.215319444891065e-06,0.3228473980418259,0.9992594122886658,86687bd8496e9ee0,model output (Notebook 07b)
+outputs/inference_full_roi/model_recurrence_30m.tif,model_recurrence,True,2598 x 1625,EPSG:32636,30.0,True,1821388.0,0.0,0.010462350867964182,1.0,93e5602731deece9,model output (Notebook 07b)
+outputs/inference_full_roi/burned_prob_30m.tif,burned_prob,True,2598 x 1625,EPSG:32636,30.0,True,1821388.0,0.0002594061952549964,0.23680590399248572,0.9602833390235901,42129dea128b495b,model output (Notebook 07b)
+outputs/inference_full_roi/recurrence_30m.tif,recurrence_reference,True,2598 x 1625,EPSG:32636,30.0,True,1827777.0,0.0,0.0033277583066476492,1.0,214ad0e7e3c90818,reference recurrence from the 10 m burn-count raster (context only)
+data/thesis_maps/fig_gt_fires.shp,reference fire polygons,True,,EPSG:4326,,,,,,,82ebdec36dc03822,"3,596 polygons: 3,504 dated 2017-2025 (used), 92 dated 2016 (outside the label window, excluded); sources {'layer1': 2531, 'layer2': 1065}"
+data/raw/landcover_2018_30m.tif,"land cover 2018, 30 m mode",True,2598 x 1625,EPSG:32636,30.0,True,,,,,e0cf627941607b5e,"dtype int16, nodata None; aligned"
+data/thesis_maps/fig_ris_balanced.tif,thesis Balanced-RIS map (definition check only),True,,,,,,,,,,EPSG:4326 reprojection used for Figure 4.3
+diagnostics/nb13_landcover_timing/tables,Notebook 13 per-class tables (reused in §4),True,,,,,,,,,,

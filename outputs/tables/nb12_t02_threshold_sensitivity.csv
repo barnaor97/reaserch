@@ -1,0 +1,7 @@
+min_pixels,n_units,spearman_of_class_ordering_vs_min30,class_ordering,top_decile_jaccard_ecological,top_decile_jaccard_fire-focused,top_decile_jaccard_balanced
+0,5831,0.9761904761904763,grassland > fallow > shrubland > bare > cropland > forest > built-up > orchards,0.2649122807017544,0.24310344827586206,0.2761061946902655
+10,2975,0.8095238095238096,grassland > fallow > shrubland > built-up > cropland > bare > forest > orchards,0.5494880546075085,0.5494880546075085,0.5494880546075085
+20,2093,1.0,fallow > grassland > shrubland > bare > cropland > forest > built-up > orchards,0.7815533980582524,0.7815533980582524,0.7815533980582524
+30,1628,1.0,fallow > grassland > shrubland > bare > cropland > forest > built-up > orchards,1.0,1.0,1.0
+50,1089,0.9761904761904763,fallow > grassland > bare > shrubland > cropland > forest > built-up > orchards,0.6645962732919255,0.654320987654321,0.6645962732919255
+100,528,1.0,fallow > grassland > shrubland > bare > cropland > forest > orchards > built-up,0.32298136645962733,0.32298136645962733,0.32298136645962733

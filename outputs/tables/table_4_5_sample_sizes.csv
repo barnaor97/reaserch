@@ -1,0 +1,11 @@
+LC code,LC name,n_burned_test,n_burned_full,ratio_test_full
+10,Forest,5561,37914,0.147
+11,Orchards,554,3872,0.143
+20,Shrubland,9652,64429,0.15
+30,Grassland,18325,121880,0.15
+40,Cropland,7308,48533,0.151
+41,Covered Agriculture,45,284,0.158
+50,Built Up,114,821,0.139
+60,Bare,895,5783,0.155
+61,Fallow,1608,10010,0.161
+80,Water,241,1480,0.163

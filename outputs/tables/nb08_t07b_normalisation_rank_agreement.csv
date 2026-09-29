@@ -1,0 +1,6 @@
+variant,class_rank_spearman_vs_published
+abs_drop,0.7166666666666667
+unclipped_median,0.9833333333333333
+gap_global_denominator,0.7166666666666667
+gap_class_denominator,0.9833333333333333
+"pixel Pearson(log|baseline|, log unclipped gap)",-0.5731177128763124

@@ -1,0 +1,3 @@
+population,n_classes,spearman_pixel_vs_unit_unweighted,spearman_pixel_vs_unit_area_weighted,ordering_identical,pixel_order,unit_order
+documented,7,0.9642857142857145,1.0,False,grassland > fallow > shrubland > bare > forest > cropland > orchards,grassland > fallow > shrubland > forest > bare > cropland > orchards
+model,9,0.35,0.8333333333333333,False,grassland > bare > fallow > shrubland > forest > cropland > built-up > orchards > covered agriculture,bare > built-up > orchards > grassland > shrubland > fallow > forest > cropland > covered agriculture

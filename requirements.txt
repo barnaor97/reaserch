@@ -1,0 +1,30 @@
+# Modelling stack (Chapters 3-4: sample construction, training, experiments).
+# Environment used for the thesis: Python 3.11, CUDA 12.1, NVIDIA RTX 4090
+# (Colab T4 also used for some runs; see SETUP notes in docs/).
+#
+# NOTE ON PINNING: exact package versions for the training stage were not
+# recorded at run time. The versions below are therefore NOT the verified
+# thesis versions - they are the documented dependency set. Results may differ
+# slightly on other versions. The geospatial stage IS version-pinned; see
+# requirements-geo.txt.
+#
+#   conda create -n thesis python=3.11 -y && conda activate thesis
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#   pip install -r requirements.txt
+
+torch
+torchvision
+numpy
+pandas
+scikit-learn
+scipy
+matplotlib
+seaborn
+tqdm
+earthengine-api
+google-cloud-storage
+google-auth
+google-auth-httplib2
+jupyter
+jupyterlab
+ipykernel

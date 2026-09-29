@@ -1,0 +1,2 @@
+n_pixel_months,n_positive,positive_rate,roc_auc,pr_auc,pr_auc_no_skill_baseline,pr_auc_lift,operating_threshold,precision_at_operating,recall_at_operating,f1_at_operating,best_f1_on_curve,best_f1_threshold
+9582360,50598,0.005280327517539263,0.9882714467313802,0.7009116547870553,0.005280327517539263,132.7401856151707,0.502,0.7125385732437829,0.6206371793351516,0.6634203021020387,0.6646455426609292,0.516670286655426

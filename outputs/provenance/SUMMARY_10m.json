@@ -1,0 +1,33 @@
+{
+ "run": "2026-09-29T11:50:26Z",
+ "grid": {
+  "crs": "EPSG:32636",
+  "H": 7794,
+  "W": 4875,
+  "res": 10,
+  "origin": [
+   620610,
+   3514560
+  ]
+ },
+ "px_ha": 0.01,
+ "min_unit_px": 36,
+ "min_unit_ha": 0.36,
+ "threshold": 0.502,
+ "eligible_cells": 16912470,
+ "reference_raw_ha": 3044.59,
+ "model_raw_ha": 8226.74,
+ "overlap_ha": 2203.01,
+ "reference_only_ha": 841.58,
+ "model_only_ha": 6023.7300000000005,
+ "footprint_jaccard": 0.24293474425251865,
+ "unit_footprint_jaccard": 0.2978416781142284,
+ "pct_reference_detected": 72.35818287519831,
+ "pct_model_outside_inventory": 73.22134891828355,
+ "reference_final_units": 1095.0,
+ "model_final_units": 1943.0,
+ "reference_analysed_ha": 2806.12,
+ "model_analysed_ha": 6162.030000000001,
+ "hidden_units_reference": 26.0,
+ "hidden_units_model": 25.0
+}

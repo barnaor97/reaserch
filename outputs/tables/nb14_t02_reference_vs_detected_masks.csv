@@ -1,0 +1,14 @@
+item,n_px,area_ha,mean_RIS_balanced,median_RIS_balanced,value,detail
+eligible pixels (indicators defined),1821388.0,163924.91999999998,,,,finite in all indicator rasters
+"inside 2017-2025 fire polygons, any pixel",38502.0,3465.18,,,,rasterised at pixel centres
+inside polygons but not eligible (no indicators),5345.0,481.04999999999995,,,,outside the inference eco mask
+(a) documented-burned,33157.0,2984.13,0.4635348207009432,0.47168392315506935,,inside polygons and eligible
+(b) model-detected,75492.0,6794.28,0.5001307852445821,0.5121755972504616,,burned_prob > 0.502
+both (a) and (b),18522.0,1666.98,0.5517893197419436,0.5767581798136234,,
+"documented-burned, not detected",14635.0,1317.1499999999999,0.3518402644155035,0.35620864760130644,,missed by the model
+"detected, outside reference polygons",56970.0,5127.3,0.48333564085349673,0.49367534555494785,,not in the incomplete inventory
+context: recurrence_30m > 0 (alternative reference mask),26533.0,2387.97,0.46851298238453437,0.4763626493513584,,10 m burn count read at 30 m
+"Jaccard index, (a) vs (b)",,,,,0.20551000255195445,
+% of documented-burned pixels detected,,,,,55.861507374008504,
+% of detected pixels inside reference polygons,,,,,24.53505007153076,
+"Jaccard index, (a) vs recurrence_30m > 0",,,,,0.7055260300588605,context: sensitivity of the reference mask to its construction

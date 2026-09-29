@@ -1,0 +1,53 @@
+{
+  "experiment_name": "exp11_gru_baseline",
+  "burned_detection": {
+    "auc": 0.9947395470699627,
+    "threshold": 0.541859296482412,
+    "precision": 0.7804547609908099,
+    "recall": 0.683110004347998,
+    "f1": 0.72854508088739,
+    "confusion_matrix": [
+      [
+        9522039,
+        9723
+      ],
+      [
+        16034,
+        34564
+      ]
+    ]
+  },
+  "correlations": {
+    "severity": {
+      "pearson": 0.7746877074241638,
+      "pearson_pvalue": 0.0,
+      "spearman": 0.7020011459936506,
+      "spearman_pvalue": 0.0
+    },
+    "persistence": {
+      "pearson": 0.5150132775306702,
+      "pearson_pvalue": 0.0,
+      "spearman": 0.45199303675774133,
+      "spearman_pvalue": 0.0
+    },
+    "recovery_gap": {
+      "pearson": 0.6841943860054016,
+      "pearson_pvalue": 0.0,
+      "spearman": 0.6181956577650294,
+      "spearman_pvalue": 0.0
+    }
+  },
+  "per_category": null,
+  "model_info": {
+    "architecture": "GRUModel",
+    "n_parameters": 140804,
+    "epochs_trained": 50,
+    "best_val_auc": 0.994968060193765,
+    "loss_type": "MaskedMultiTaskLoss"
+  },
+  "data_info": {
+    "n_train": 426245,
+    "n_val": 91338,
+    "n_test": 91339
+  }
+}

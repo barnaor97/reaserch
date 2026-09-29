@@ -1,0 +1,7 @@
+input,dtype,crs,width,height,pixel_size_x,pixel_size_y,origin_x,origin_y,extent_right,extent_bottom,transform_matches_grid,shape_matches_grid,crs_matches_grid,nodata,finite_px,sha256_head
+outputs/inference_full_roi/severity_30m.tif,float32,EPSG:32636,1625,2598,30.0,-30.0,620610.0,3514560.0,669360.0,3436620.0,True,True,True,nan,1821388,e5e66e61a567f18d
+outputs/inference_full_roi/persistence_30m.tif,float32,EPSG:32636,1625,2598,30.0,-30.0,620610.0,3514560.0,669360.0,3436620.0,True,True,True,nan,1821388,e319beeb8dff6930
+outputs/inference_full_roi/recovery_gap_30m.tif,float32,EPSG:32636,1625,2598,30.0,-30.0,620610.0,3514560.0,669360.0,3436620.0,True,True,True,nan,1821388,86687bd8496e9ee0
+outputs/inference_full_roi/model_recurrence_30m.tif,float32,EPSG:32636,1625,2598,30.0,-30.0,620610.0,3514560.0,669360.0,3436620.0,True,True,True,nan,1821388,93e5602731deece9
+outputs/inference_full_roi/burned_prob_30m.tif,float32,EPSG:32636,1625,2598,30.0,-30.0,620610.0,3514560.0,669360.0,3436620.0,True,True,True,nan,1821388,42129dea128b495b
+data/raw/landcover_2018_30m.tif,int16,EPSG:32636,1625,2598,30.0,-30.0,620610.0,3514560.0,669360.0,3436620.0,True,True,True,None,,e0cf627941607b5e

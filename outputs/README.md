@@ -1,0 +1,83 @@
+# Outputs and figure provenance
+
+## What is committed here
+
+- `outputs/tables/` and `outputs/tables_10m/` — the **aggregate** result tables reproduced in the thesis (class-level and summary statistics only). Every table carrying coordinates, per-unit identifiers, or per-unit/per-pixel rows was screened out; the screening record is `docs/table_screening.json`.
+- `outputs/provenance/` — run manifests recording grid definition, cell counts, the **0.502** operating threshold, layer checksums and QA results.
+
+Raster surfaces, GeoPackages and per-unit tables are **not** committed: they are large and they are derived from the restricted fire-reference inventory and land-cover product.
+
+## Figure provenance
+
+Two independent properties are recorded for every figure, and they must not be conflated:
+
+- **Role** — the figure's scientific standing in the final thesis: *main-text result*, *supporting*, *appendix diagnostic*, or *conceptual*.
+- **Implementation** — the computational resolution of the code that rendered it: *10 m* (the final regional pipeline) or *30 m* (the earlier implementation).
+
+A figure can be a main-text result whose image was rendered by the 30 m implementation. Figures 14 and 15 are exactly that case; see the note below.
+
+| Fig | Thesis section | Role | Implementation | Generating code | Output file | Restricted input? |
+|---|---|---|---|---|---|---|
+| 1 | 3.1 | conceptual | — | manually prepared diagram | embedded EMF | no |
+| 2 | 3.2.1 | supporting | — | **unresolved** | not retained | yes (land cover) |
+| 3 | 3.2.1 | supporting | public | `figures/22_study_area_environment.py` | `study_area_environment.png/.pdf` | **no** |
+| 4 | 3.2.3 | supporting | — | **unresolved** | not retained | yes (inventory) |
+| 5 | 3.2.3 | supporting | — | **unresolved** | not retained | yes (inventory) |
+| 6 | 3.2.7 | supporting | — | **unresolved** | not retained | yes (sample) |
+| 7 | 3.2.7 | supporting | 30 m | `notebooks/08_target_diagnostics.ipynb` | `fig06_event_aligned_nbr.png` | yes (inventory) |
+| 8 | 4.1.1 | supporting | — | `notebooks/05_main_model.ipynb` | `training_curves.png` | yes (training data) |
+| 9 | 4.1.1 | supporting | — | `notebooks/05_main_model.ipynb` | `dimension_distributions.png` | yes (training data) |
+| 10 | 4.10 | supporting | — | `notebooks/feature_importance_analysis_v4.ipynb` | `feature_importance_top20.png` | yes (training data) |
+| 11 | 4.11 | **main-text result** | **10 m** | `pipeline_10m/figures_10m.py` | `figure10_10m_candidate.png/.pdf` | yes (both) |
+| 12 | 4.11 | **main-text result** | **10 m** | `pipeline_10m/figures_10m.py` | `figure11_10m_candidate.png/.pdf` | yes (both) |
+| 13 | 4.12 | supporting diagnostic | 30 m | `supplementary_30m/13_landcover_timing_diagnostic.ipynb` | `nb13_f05_fixed_cohort_control.png` | yes (both) |
+| 14 | **4.13** | **main-text result** | 30 m | `supplementary_30m/19_finalize_polygon_thesis_outputs.py` | `figure_recovery_gap_processing_stages.png` | yes (both) |
+| 15 | **4.13** | **main-text result** | **10 m** | `pipeline_10m/figure15_10m.py` | `figure15_10m.png/.pdf` | yes (both) |
+| A.1 | A.1 | appendix | — | **unresolved** | not retained | yes (training data) |
+| A.2 | A.4 | appendix diagnostic | 30 m | `supplementary_30m/compose_fig_4_2_and_4_3.ipynb` | `figure_4_3_ris_composites.png` | yes (both) |
+| A.3 | A.4 | appendix diagnostic | 30 m | `supplementary_30m/14_landuse_presentation.ipynb` | `nb14_f04_recovery_gap_by_class_small_multiples.png` | yes (both) |
+| A.4 | A.4 | appendix diagnostic | 30 m | `supplementary_30m/14_landuse_presentation.ipynb` | `nb14_f04_RIS_balanced_by_class_small_multiples.png` | yes (both) |
+
+### Figures 14 and 15 — role and implementation differ
+
+**Role: main-text analytical results.** Both sit in Section 4.13 (*Prioritization over burned spatial units*) and are cited in primary Results prose, not in an appendix and not as retained diagnostics.
+
+**Implementation: rendered by the 30 m code.** Both embedded images are byte-identical to outputs of `19_finalize_polygon_thesis_outputs.py`, which operates on the 30 m grid. `pipeline_10m/figures_10m.py` produces only Figures 11 and 12; it does not regenerate these two.
+
+**Figure 15 has been regenerated at 10 m.** The published image had been rendered by the 30 m implementation while the Section 4.13 prose reported the 10 m results (30 m gave cropland 27/25, forest 16/8, 37 hidden units; the text states cropland 18 of 25, forest 2 of 15, 26 hidden). `pipeline_10m/figure15_10m.py` now rebuilds the figure from `reference_units_final.csv` and `model_units_final.csv`, applying the hidden-unit rule exactly as `polygon_10m.py` defines it. A QA gate in the script asserts that every plotted count equals `p10_t09_global_vs_within_landcover_counts.csv` and that the hidden-unit totals equal `AGREEMENT_10m.json`; it fails loudly otherwise. Figure and text now describe one analysis. Provenance, including input and output SHA-256 hashes and every displayed count, is in `provenance/FIGURE15_PROVENANCE.json`. Every land-cover class present in each population is plotted, including classes with very few units (the reference panel shows `water` with n = 1); the earlier 30 m rendering suppressed classes with fewer than three units. Showing all of them keeps the figure exactly congruent with `p10_t09_global_vs_within_landcover_counts.csv`. Small-n classes carry an asterisk and are excluded from the headline hidden-unit total, as in the analysis.
+
+Figure 14 is deliberately left unchanged. The decomposition it visualises (pixel-level normalisation effects, rank correlations ρ = 0.976 / 0.543 / 0.943 and unit-level ρ = 0.2571) rests on the sampled-pixel and 30 m unit diagnostics, which the 10 m pipeline does not recompute. Its implementation resolution is therefore intrinsic to the analysis, not an oversight.
+
+No scientific definition, threshold, RIS formulation, spatial-unit definition or reported 10 m value was changed in regenerating Figure 15; only the rendering was moved onto the final 10 m outputs. Figure 14 remains a main-text diagnostic implemented at 30 m, documented as such.
+
+### Unresolved provenance — Figures 2, 4, 5, 6 and A.1
+
+For each of these, the exact rendered image embedded in the thesis was **not retained in the local project**. Every image in the project was compared against the embedded versions by SHA-256, exact pixel dimensions and aspect ratio; none matched. They were most likely produced in a Colab session whose figure outputs were never synced back. **No replacement has been generated, and none should be.**
+
+| Fig | Likely generating code | Required inputs | Status |
+|---|---|---|---|
+| 2 | land-cover mapping code; closest candidates are `supplementary_30m/14_landuse_presentation.ipynb` and `13_landcover_timing_diagnostic.ipynb` — **not confirmed** | project land-cover product (2025 layer), ROI | rendered image not retained |
+| 4 | fire-reference inventory plotting; generating notebook **not identified** | fire-reference inventory, ROI | rendered image not retained |
+| 5 | annual burn-rate computation over the inventory; generating notebook **not identified** | fire-reference inventory | rendered image not retained |
+| 6 | example-pixel NBR/NDVI series; closest candidate is `notebooks/08_target_diagnostics.ipynb` — **not confirmed** | monthly Sentinel-2 series for four sample pixels (sample defined by the inventory) | rendered image not retained |
+| A.1 | feature correlation matrix; closest candidate is the EDA stage — **not confirmed** | scaled feature matrix (`X_scaled.npy`, regenerable) | rendered image not retained |
+
+### A note on the legacy "Ground-truth fire polygons" label
+
+`supplementary_30m/compose_fig_4_2_and_4_3.ipynb` writes the panel heading **"Ground-truth fire polygons"** into Appendix Figure A.2. That string is retained deliberately: it is the legacy label baked into the figure as it appears in the thesis, and the thesis caption explains it. Everywhere else, these data are called the **fire-reference inventory**, and they are not independently validated ground truth.
+
+These are documentation gaps, not blockers: the underlying analyses are reproducible from the code in this repository once the required inputs are available.
+
+Resolved by contrast: Figures 8, 9, 10 and A.2 are rescaled or recompressed copies of files that *are* present (Word resampled them on insert), and Figures 3, 7, 11, 12, 13, 14, 15, A.3 and A.4 match project files byte-for-byte.
+
+Figure 1 is a manually prepared conceptual workflow diagram with no generating code.
+
+## Reproducing the figures
+
+```bash
+# public, runs immediately
+python figures/22_study_area_environment.py
+
+# final 10 m figures — requires restricted inputs in data/restricted/
+bash pipeline_10m/run_pipeline.sh
+```

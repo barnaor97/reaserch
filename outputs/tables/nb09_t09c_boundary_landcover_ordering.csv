@@ -1,0 +1,5 @@
+population,spearman_vs_primary,max_abs_change_in_class_mean,ordering_identical
+full population (primary),1.0,0.0,True
+excluding A,1.0,0.001625657081604004,True
+excluding B,1.0,0.011682689189910889,True
+excluding A and B,1.0,0.011283934116363525,True

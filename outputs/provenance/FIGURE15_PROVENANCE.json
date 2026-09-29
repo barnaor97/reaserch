@@ -1,0 +1,270 @@
+{
+ "generated_utc": "2026-09-29T21:17:41Z",
+ "generating_script": "notebooks/prod10m/figure15_10m.py",
+ "purpose": "Figure 15 regenerated from the final 10 m analysis so that figure and Section 4.13 prose describe the same analysis. Supersedes the 30 m rendering outputs/final_polygon_thesis/figure_global_vs_within_landcover_priority.png.",
+ "implementation_resolution": "10 m",
+ "rule": "within-class top decile = ceil(n/10) by within_landcover_RIS_rank; hidden if mean_RIS_balanced < population 0.90 quantile; classes with n < 20 flagged and excluded from the headline total (identical to polygon_10m.py)",
+ "inputs": {
+  "outputs/polygon_10m_candidate/reference_units_final.csv": "bc77e955b4cea8ae4700917ad069003e5a35ca5b143e63d48eb9f3c75dc80149",
+  "outputs/polygon_10m_candidate/model_units_final.csv": "5183f3eb7627f21c6f430ddd594232d8c97571c12559e0ae9628085a9f46485d",
+  "outputs/polygon_10m_candidate/tables/p10_t09_global_vs_within_landcover_counts.csv": "0608ea2cd08287f1fabbf995372505d300016523ce2fa06b7c3dbae9d6da2c78",
+  "outputs/polygon_10m_candidate/AGREEMENT_10m.json": "9225ecd0987507f0e8f5d21c05fd53c7b7923bde6d260df6f3995f989810d6b3"
+ },
+ "outputs": {
+  "outputs/polygon_10m_candidate/maps/figure15_10m.png": "096d8ec2cc21256b63b1897027dce60c0b06c355db55fec83c17c2ed78ce18d5",
+  "outputs/polygon_10m_candidate/maps/figure15_10m.pdf": "6b940df44c108a9f9d782f2afa2ce034d5220978f985afb09cf064ab91af6d8e"
+ },
+ "global_cut": {
+  "reference": 0.6326703715640272,
+  "model": 0.6265669908139815
+ },
+ "hidden_units": {
+  "reference": 26,
+  "model": 25
+ },
+ "headline_values": {
+  "hidden_reference_units": 26,
+  "cropland_reference": "18 of 25",
+  "forest_reference": "2 of 15"
+ },
+ "qa": [
+  {
+   "quantity": "n_units",
+   "rows": 20,
+   "mismatches": 0
+  },
+  {
+   "quantity": "within_class_top_decile_n",
+   "rows": 20,
+   "mismatches": 0
+  },
+  {
+   "quantity": "also_in_global_top_decile_n",
+   "rows": 20,
+   "mismatches": 0
+  },
+  {
+   "quantity": "high_within_class_but_below_global_cut_n",
+   "rows": 20,
+   "mismatches": 0
+  },
+  {
+   "quantity": "median_RIS",
+   "rows": 20,
+   "max_abs_diff": 5.551115123125783e-17
+  },
+  {
+   "quantity": "hidden_units_reference",
+   "computed": 26,
+   "agreement_json": 26
+  },
+  {
+   "quantity": "hidden_units_model",
+   "computed": 25,
+   "agreement_json": 25
+  }
+ ],
+ "displayed_counts": [
+  {
+   "population": "reference",
+   "land_cover_name": "forest",
+   "n_units": 143,
+   "plotted_grey": 128,
+   "plotted_red": 13,
+   "plotted_blue": 2,
+   "small_n_class_flag": false,
+   "median_RIS": 0.4298222987991191
+  },
+  {
+   "population": "reference",
+   "land_cover_name": "orchards",
+   "n_units": 31,
+   "plotted_grey": 27,
+   "plotted_red": 0,
+   "plotted_blue": 4,
+   "small_n_class_flag": false,
+   "median_RIS": 0.1653311676903247
+  },
+  {
+   "population": "reference",
+   "land_cover_name": "shrubland",
+   "n_units": 267,
+   "plotted_grey": 240,
+   "plotted_red": 27,
+   "plotted_blue": 0,
+   "small_n_class_flag": false,
+   "median_RIS": 0.4884599781459353
+  },
+  {
+   "population": "reference",
+   "land_cover_name": "grassland",
+   "n_units": 323,
+   "plotted_grey": 290,
+   "plotted_red": 33,
+   "plotted_blue": 0,
+   "small_n_class_flag": false,
+   "median_RIS": 0.5046091454600294
+  },
+  {
+   "population": "reference",
+   "land_cover_name": "cropland",
+   "n_units": 247,
+   "plotted_grey": 222,
+   "plotted_red": 7,
+   "plotted_blue": 18,
+   "small_n_class_flag": false,
+   "median_RIS": 0.3520530068596441
+  },
+  {
+   "population": "reference",
+   "land_cover_name": "covered agriculture",
+   "n_units": 3,
+   "plotted_grey": 2,
+   "plotted_red": 0,
+   "plotted_blue": 1,
+   "small_n_class_flag": true,
+   "median_RIS": 0.3486672806052061
+  },
+  {
+   "population": "reference",
+   "land_cover_name": "built-up",
+   "n_units": 7,
+   "plotted_grey": 6,
+   "plotted_red": 0,
+   "plotted_blue": 1,
+   "small_n_class_flag": true,
+   "median_RIS": 0.3574537706063111
+  },
+  {
+   "population": "reference",
+   "land_cover_name": "bare",
+   "n_units": 27,
+   "plotted_grey": 24,
+   "plotted_red": 1,
+   "plotted_blue": 2,
+   "small_n_class_flag": false,
+   "median_RIS": 0.4023808834136461
+  },
+  {
+   "population": "reference",
+   "land_cover_name": "fallow",
+   "n_units": 46,
+   "plotted_grey": 41,
+   "plotted_red": 5,
+   "plotted_blue": 0,
+   "small_n_class_flag": false,
+   "median_RIS": 0.4764025196240297
+  },
+  {
+   "population": "reference",
+   "land_cover_name": "water",
+   "n_units": 1,
+   "plotted_grey": 0,
+   "plotted_red": 0,
+   "plotted_blue": 1,
+   "small_n_class_flag": true,
+   "median_RIS": 0.3027044508158256
+  },
+  {
+   "population": "model",
+   "land_cover_name": "forest",
+   "n_units": 285,
+   "plotted_grey": 256,
+   "plotted_red": 16,
+   "plotted_blue": 13,
+   "small_n_class_flag": false,
+   "median_RIS": 0.4389113114921601
+  },
+  {
+   "population": "model",
+   "land_cover_name": "orchards",
+   "n_units": 25,
+   "plotted_grey": 22,
+   "plotted_red": 1,
+   "plotted_blue": 2,
+   "small_n_class_flag": false,
+   "median_RIS": 0.3161681179017386
+  },
+  {
+   "population": "model",
+   "land_cover_name": "shrubland",
+   "n_units": 481,
+   "plotted_grey": 432,
+   "plotted_red": 49,
+   "plotted_blue": 0,
+   "small_n_class_flag": false,
+   "median_RIS": 0.4985608450280359
+  },
+  {
+   "population": "model",
+   "land_cover_name": "grassland",
+   "n_units": 594,
+   "plotted_grey": 534,
+   "plotted_red": 60,
+   "plotted_blue": 0,
+   "small_n_class_flag": false,
+   "median_RIS": 0.5081925384877354
+  },
+  {
+   "population": "model",
+   "land_cover_name": "cropland",
+   "n_units": 349,
+   "plotted_grey": 314,
+   "plotted_red": 25,
+   "plotted_blue": 10,
+   "small_n_class_flag": false,
+   "median_RIS": 0.4151497355994436
+  },
+  {
+   "population": "model",
+   "land_cover_name": "covered agriculture",
+   "n_units": 2,
+   "plotted_grey": 1,
+   "plotted_red": 0,
+   "plotted_blue": 1,
+   "small_n_class_flag": true,
+   "median_RIS": 0.4477363981527752
+  },
+  {
+   "population": "model",
+   "land_cover_name": "built-up",
+   "n_units": 16,
+   "plotted_grey": 14,
+   "plotted_red": 2,
+   "plotted_blue": 0,
+   "small_n_class_flag": true,
+   "median_RIS": 0.4614773640203586
+  },
+  {
+   "population": "model",
+   "land_cover_name": "bare",
+   "n_units": 61,
+   "plotted_grey": 54,
+   "plotted_red": 7,
+   "plotted_blue": 0,
+   "small_n_class_flag": false,
+   "median_RIS": 0.4397721118276839
+  },
+  {
+   "population": "model",
+   "land_cover_name": "fallow",
+   "n_units": 124,
+   "plotted_grey": 111,
+   "plotted_red": 13,
+   "plotted_blue": 0,
+   "small_n_class_flag": false,
+   "median_RIS": 0.49002101463586445
+  },
+  {
+   "population": "model",
+   "land_cover_name": "water",
+   "n_units": 6,
+   "plotted_grey": 5,
+   "plotted_red": 1,
+   "plotted_blue": 0,
+   "small_n_class_flag": true,
+   "median_RIS": 0.445925622621801
+  }
+ ],
+ "ai_generated_content": false
+}

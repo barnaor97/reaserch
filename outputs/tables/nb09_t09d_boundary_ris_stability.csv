@@ -1,0 +1,10 @@
+profile,exclusion,jaccard_top_decile,pct_of_top_decile_excluded
+Ecological priority,excluding A,0.9967465347205747,0.3016949152542373
+Ecological priority,excluding B,0.9487118644067797,0.3728813559322034
+Ecological priority,excluding A and B,0.9459661016949152,0.6745762711864407
+Fire-focused,excluding A,0.9901368012160108,0.6338983050847458
+Fire-focused,excluding B,0.9487118644067797,0.36610169491525424
+Fire-focused,excluding A and B,0.9459661016949152,1.0
+Balanced,excluding A,0.9875856019970988,0.43050847457627117
+Balanced,excluding B,0.9487118644067797,0.5491525423728814
+Balanced,excluding A and B,0.9459661016949152,0.9796610169491525

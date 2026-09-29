@@ -1,0 +1,41 @@
+threshold,min_valid_months,land_cover,n_cells,pct_of_class_retained,observed_nbr_loss,rank
+any valid observation,1,forest,59429,100.0,0.020875273982972137,5.0
+any valid observation,1,orchards,117870,100.0,-0.019807490759070602,9.0
+any valid observation,1,shrubland,78645,100.0,0.03672644143912121,1.0
+any valid observation,1,grassland,221358,100.0,0.025110717847730998,3.0
+any valid observation,1,cropland,907519,100.0,0.012352144645675274,6.0
+any valid observation,1,covered agriculture,35492,100.0,0.009872625841725565,7.0
+any valid observation,1,built-up,9092,100.0,0.021759227109608835,4.0
+any valid observation,1,bare,353122,100.0,-0.002047677137199507,8.0
+any valid observation,1,fallow,37501,100.0,0.028063865974664835,2.0
+any valid observation,1,water,664,100.0,-0.0277543026327239,10.0
+>= 6 valid months in both years,6,forest,59429,100.0,0.020875273982972137,5.0
+>= 6 valid months in both years,6,orchards,117870,100.0,-0.019807490759070602,9.0
+>= 6 valid months in both years,6,shrubland,78645,100.0,0.03672644143912121,1.0
+>= 6 valid months in both years,6,grassland,221358,100.0,0.025110717847730998,3.0
+>= 6 valid months in both years,6,cropland,907519,100.0,0.012352144645675274,6.0
+>= 6 valid months in both years,6,covered agriculture,35492,100.0,0.009872625841725565,7.0
+>= 6 valid months in both years,6,built-up,9092,100.0,0.021759227109608835,4.0
+>= 6 valid months in both years,6,bare,353122,100.0,-0.002047677137199507,8.0
+>= 6 valid months in both years,6,fallow,37501,100.0,0.028063865974664835,2.0
+>= 6 valid months in both years,6,water,664,100.0,-0.0277543026327239,10.0
+>= 9 valid months in both years,9,forest,59429,100.0,0.020875273982972137,5.0
+>= 9 valid months in both years,9,orchards,117870,100.0,-0.019807490759070602,9.0
+>= 9 valid months in both years,9,shrubland,78645,100.0,0.03672644143912121,1.0
+>= 9 valid months in both years,9,grassland,221358,100.0,0.025110717847730998,3.0
+>= 9 valid months in both years,9,cropland,907519,100.0,0.012352144645675274,6.0
+>= 9 valid months in both years,9,covered agriculture,35492,100.0,0.009872625841725565,7.0
+>= 9 valid months in both years,9,built-up,9092,100.0,0.021759227109608835,4.0
+>= 9 valid months in both years,9,bare,353122,100.0,-0.002047677137199507,8.0
+>= 9 valid months in both years,9,fallow,37501,100.0,0.028063865974664835,2.0
+>= 9 valid months in both years,9,water,664,100.0,-0.0277543026327239,10.0
+all 12 months in both years,12,forest,43919,73.90163051708761,0.044043526410716655,2.0
+all 12 months in both years,12,orchards,104613,88.75286332400101,-0.02061486187790532,10.0
+all 12 months in both years,12,shrubland,68704,87.35965414203064,0.044547970788119076,1.0
+all 12 months in both years,12,grassland,212980,96.21518083828006,0.026770748986287573,4.0
+all 12 months in both years,12,cropland,831518,91.62540949555877,0.01627410543451991,6.0
+all 12 months in both years,12,covered agriculture,34526,97.27825988955257,0.01078642749528102,7.0
+all 12 months in both years,12,built-up,8508,93.57677078750551,0.022168595048659222,5.0
+all 12 months in both years,12,bare,352233,99.7482456488126,-0.002091122999262566,8.0
+all 12 months in both years,12,fallow,36309,96.82141809551746,0.030089240275749385,3.0
+all 12 months in both years,12,water,529,79.66867469879519,-0.0157590629413547,9.0

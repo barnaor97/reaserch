@@ -1,0 +1,13 @@
+population,step,n_items,n_px,area_ha
+reference,0. burned mask,1631,304459,3044.59
+reference,1a. components below floor REMOVED,947,9277,92.77
+reference,1b. components kept,684,295182,2951.82
+reference,2a. zone x class candidates,2351,295182,2951.82
+reference,2b. candidates below floor REMOVED,1256,14570,145.70000000000002
+reference,3. FINAL units analysed,1095,280612,2806.12
+model,0. burned mask,62308,822674,8226.74
+model,1a. components below floor REMOVED,60729,176612,1766.1200000000001
+model,1b. components kept,1579,646062,6460.62
+model,2a. zone x class candidates,4624,646062,6460.62
+model,2b. candidates below floor REMOVED,2681,29859,298.59000000000003
+model,3. FINAL units analysed,1943,616203,6162.030000000001

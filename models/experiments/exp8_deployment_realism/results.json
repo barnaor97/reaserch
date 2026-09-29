@@ -1,0 +1,57 @@
+{
+  "experiment_name": "exp8_deployment_realism",
+  "roi_distribution": {
+    "counts": {
+      "no_fires": 16608009,
+      "low_recurrence": 300032,
+      "medium_recurrence": 4050,
+      "high_recurrence": 379
+    },
+    "total": 16912470,
+    "proportions": {
+      "no_fires": 0.9819978394640168,
+      "low_recurrence": 0.01774028276177282,
+      "medium_recurrence": 0.00023946827400137295,
+      "high_recurrence": 2.240950020901737e-05
+    }
+  },
+  "sample_distribution": {
+    "counts": {
+      "no_fires": 304461,
+      "low_recurrence": 300032,
+      "medium_recurrence": 4050,
+      "high_recurrence": 379
+    },
+    "total": 608922
+  },
+  "weights": {
+    "no_fires": 1.9639956789280335,
+    "low_recurrence": 0.036004321071966425,
+    "medium_recurrence": 0.036004321071966425,
+    "high_recurrence": 0.036004321071966425
+  },
+  "weighted_metrics": {
+    "burned": {
+      "auc_unweighted": 0.9882714467313802,
+      "auc_weighted": 0.9925901500697843,
+      "f1_unweighted": 0.6635504135028236,
+      "f1_weighted": 0.3139788537797468,
+      "precision_weighted": 0.21021580480231108,
+      "recall_weighted": 0.6200245068976723
+    },
+    "correlations": {
+      "severity": {
+        "pearson_unweighted": 0.7739571332931519,
+        "pearson_weighted": 0.24456303167697643
+      },
+      "persistence": {
+        "pearson_unweighted": 0.5229458808898926,
+        "pearson_weighted": 0.11276618525610815
+      },
+      "recovery_gap": {
+        "pearson_unweighted": 0.6920905709266663,
+        "pearson_weighted": 0.15041717591788514
+      }
+    }
+  }
+}

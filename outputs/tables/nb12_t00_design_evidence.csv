@@ -1,0 +1,12 @@
+question,value,units
+polygons whose largest land-cover class covers >=95% of the polygon,18.391787852865697,% of polygons
+polygons whose largest class covers <60% of the polygon,33.361847733105215,% of polygons
+median share of a polygon held by its largest class,0.7086092715231788,fraction
+mean number of land-cover classes per burned polygon,2.8960506069413574,classes
+pixels of the recovery-gap target sitting on a bound (0 or 1),48.870974306101964,% of burned pixels
+pixels of the severity target sitting on a bound,56.946441652874626,% of burned pixels
+within-unit pixel skewness of the recovery-gap target (median),-0.09689788147807121,skewness
+units whose recovery-gap MEDIAN collapses onto 0 or 1,36.80342927127985,% of units
+units whose recovery-gap MEAN collapses onto 0 or 1,2.3882424984690753,% of units
+units whose severity MEDIAN collapses onto 0 or 1,48.56093080220453,% of units
+units whose severity MEAN collapses onto 0 or 1,4.409063074096754,% of units

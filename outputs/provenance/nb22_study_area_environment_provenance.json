@@ -1,0 +1,76 @@
+{
+ "roi_geometry": "data/thesis_maps/fig_roi_polygon.shp",
+ "roi_crs": "EPSG:4326",
+ "roi_area_km2": 1936.1750576787138,
+ "target_crs": "EPSG:32636",
+ "display_res_m": {
+  "precipitation": 200.0,
+  "elevation": 30.0
+ },
+ "worldclim": {
+  "url": "https://geodata.ucdavis.edu/climate/worldclim/2_1/tiles/iso/ISR_wc2.1_30s_bio.tif",
+  "file": "data/external/ISR_wc2.1_30s_bio.tif",
+  "band": 12,
+  "variable": "bio_12 annual precipitation (mm)",
+  "native_res_deg": 0.008333333333333333,
+  "citation": "Fick & Hijmans (2017)"
+ },
+ "srtm": {
+  "url": "https://s3.amazonaws.com/elevation-tiles-prod/skadi/N31/N31E034.hgt.gz",
+  "file": "data/external/N31E034.hgt",
+  "native_res": "1 arc-second (~30 m)",
+  "citation": "Farr et al. (2007)"
+ },
+ "nb09_bbox_wgs84": [
+  34.2672,
+  31.0574,
+  34.782,
+  31.7495
+ ],
+ "statistics_over_roi_polygon": {
+  "precipitation_mm": {
+   "n_cells": 49084,
+   "minimum": 159.0,
+   "p25": 210.0,
+   "median": 268.0,
+   "mean": 279.2093811035156,
+   "p75": 338.0,
+   "maximum": 485.0,
+   "north_edge": 457.0,
+   "south_edge": 160.0
+  },
+  "elevation_m": {
+   "n_cells": 2156334,
+   "minimum": -22.258586883544922,
+   "p25": 83.84424591064453,
+   "median": 115.44338989257812,
+   "mean": 117.31478881835938,
+   "p75": 151.1285858154297,
+   "maximum": 262.1654052734375,
+   "north_edge": 5.679409503936768,
+   "south_edge": 155.10433959960938
+  },
+  "precipitation_mm_native_30s_roi": {
+   "n_cells": 2647,
+   "minimum": 159.0,
+   "p25": 210.0,
+   "median": 268.0,
+   "mean": 279.202880859375,
+   "p75": 338.0,
+   "maximum": 480.0
+  },
+  "elevation_m_native_1arcsec_roi": {
+   "n_cells": 2379479,
+   "minimum": -30.0,
+   "p25": 84.0,
+   "median": 115.0,
+   "mean": 117.28120422363281,
+   "p75": 151.0,
+   "maximum": 263.0
+  }
+ },
+ "outputs": [
+  "outputs/figures/study_area_environment.png",
+  "outputs/figures/study_area_environment.pdf"
+ ]
+}

@@ -1,0 +1,2 @@
+comparison,n,pearson,spearman,mean_difference,median_abs_difference,rmse,p99_abs_difference,class_mean_spread_observed,class_mean_spread_imputed,class_mean_sd_observed,class_mean_sd_imputed,spearman_of_class_ordering
+"stage A vs stage B, pixel level",295006,0.9859309576381715,0.9779257255887224,-0.013978372719380626,0.01723433717746626,0.019567354398222343,0.044827961105232496,0.13719790460303155,0.1240404808683756,0.05121451717145792,0.045765992810397546,0.9757575757575757

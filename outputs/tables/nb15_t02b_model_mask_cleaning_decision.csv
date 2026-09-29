@@ -1,0 +1,7 @@
+question,answer,evidence
+Is the model mask actually fragmented?,yes,57.7% of its 10787 components are single pixels; median component 0.09 ha
+Is the documented mask fragmented in the same way?,no,"it is a delineated footprint, dissolved from 3504 polygons; it is never cleaned"
+What would the mildest minimum-area cleaning cost?,16.1% of detected area,75492 px -> 63374 px; class ordering rho 0.905; classes kept 9 -> 8
+What would 3x3 morphological opening cost?,54.9% of detected area,"75492 px -> 34042 px, i.e. more than half the area the model flags as burned"
+Is cleaning necessary for the analysis?,no,"the physical minimum-area rule (0.36 ha) is applied when pixels are grouped into units in Section 5, so sub-threshold fragments never become units either way"
+Decision,no cleaning (as published),"no morphological operator on either mask; the same minimum-area rule at the same stage on both sides; the model mask's fragmentation is reported, not removed"

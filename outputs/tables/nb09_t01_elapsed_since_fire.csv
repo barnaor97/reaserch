@@ -1,0 +1,5 @@
+population,n,pct_of_burned,measure,minimum,p25,median,p75,maximum,mean
+last fire precedes the assessment window,294189,99.72305648020718,months from last fire to the start of the window (Jan 2025),1.0,15.0,44.0,79.0,93.0,49.05123237102679
+last fire precedes the assessment window,294189,99.72305648020718,months from last fire to the end of the record (Dec 2025),12.0,26.0,55.0,90.0,104.0,60.05123237102679
+last fire inside the assessment window (no elapsed time),817,0.2769435197928178,post-fire months inside the 12-month endpoint mean,9.0,,9.0,,11.0,9.061199510403917
+last fire inside the 2017 reference window,13369,4.531772235140981,reference level is itself post-fire,,,,,,

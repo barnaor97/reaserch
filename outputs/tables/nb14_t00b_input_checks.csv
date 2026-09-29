@@ -1,0 +1,6 @@
+check,value,passed
+"all five indicator rasters on the inference grid (2598 rows x 1625 cols, EPSG:32636, 30 m)",True,True
+identical eligible (finite) footprint across the five rasters,"1,821,388 eligible pixels",True
+burned_prob > 0.502 selects the same pixels as model_recurrence >= 0.2,agreement 1.000000,True
+thesis Balanced-RIS map = 0.25(sev+per+rg+MODEL recurrence) at sampled detected pixels,0.9990 within 1e-3 (reference-recurrence version: 0.1268),True
+2018 land-cover raster present and aligned to the inference grid,"dtype int16, nodata None; aligned",True

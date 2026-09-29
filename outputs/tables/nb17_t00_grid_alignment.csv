@@ -1,0 +1,7 @@
+input,role,crs,width,height,pixel_size_x,pixel_size_y,origin_x,origin_y,extent_right,extent_bottom,nodata,dtype,crs_ok,dims_ok,transform_ok
+outputs/inference_full_roi/severity_30m.tif,model indicator,EPSG:32636,1625,2598,30.0,-30.0,620610.0,3514560.0,669360.0,3436620.0,nan,float32,True,True,True
+outputs/inference_full_roi/persistence_30m.tif,model indicator,EPSG:32636,1625,2598,30.0,-30.0,620610.0,3514560.0,669360.0,3436620.0,nan,float32,True,True,True
+outputs/inference_full_roi/recovery_gap_30m.tif,model Recovery Gap (layer C),EPSG:32636,1625,2598,30.0,-30.0,620610.0,3514560.0,669360.0,3436620.0,nan,float32,True,True,True
+outputs/inference_full_roi/model_recurrence_30m.tif,model indicator,EPSG:32636,1625,2598,30.0,-30.0,620610.0,3514560.0,669360.0,3436620.0,nan,float32,True,True,True
+outputs/inference_full_roi/burned_prob_30m.tif,detection,EPSG:32636,1625,2598,30.0,-30.0,620610.0,3514560.0,669360.0,3436620.0,nan,float32,True,True,True
+data/raw/landcover_2018_30m.tif,2018 baseline land cover,EPSG:32636,1625,2598,30.0,-30.0,620610.0,3514560.0,669360.0,3436620.0,None,int16,True,True,True

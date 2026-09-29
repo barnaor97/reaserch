@@ -1,0 +1,17 @@
+measure,value,unit,detail
+OBSERVED — documented burned mask,2984.13,ha,"dissolved fire-reference polygons 2017-2025 on eligible pixels, before the minimum-area rule"
+OBSERVED — model-detected burned mask,6794.28,ha,"burned_prob > 0.502, before the minimum-area rule"
+OBSERVED — documented area analysed as units,2819.7,ha,after the minimum-area rule; this is what the maps and rankings use
+OBSERVED — model area analysed as units,5397.48,ha,after the minimum-area rule; this is what the maps and rankings use
+OBSERVED — Jaccard of the burned masks,0.20551000255195445,index,footprint overlap only; says nothing about priority
+OBSERVED — Jaccard of the analysed unit footprints,0.23799322033898304,index,the comparison that matches the two maps
+OBSERVED — documented area also flagged by the model,55.861507374008504,%,"spatial overlap, stated as observed"
+OBSERVED — model-flagged area lying outside the inventory footprint,75.46494992846924,%,a spatial observation only; see the interpretation row below
+INTERPRETATION — status of model-flagged area outside the inventory,,,"undetermined by this analysis. The fire-reference inventory is not assumed to be exhaustive, so non-overlap cannot be read as either a confirmed fire or a false positive; establishing which would require an independent source, not this comparison"
+spatially matched unit pairs,586.0,pairs,each model unit matched to the documented unit it overlaps most
+"Spearman of unit priority, matched pairs",0.8117613085246527,rho,how similarly the two definitions rank the same ground
+matched pairs agreeing on land-cover class,100.0,%,
+Spearman of the land-cover class ordering,-0.07142857142857144,rho,documented vs model unit-level class means
+Jaccard of the top-decile priority areas,0.3255499153976311,index,where each definition says priority is highest
+"mean unit RIS, documented",0.40373867147929726,RIS,
+"mean unit RIS, model",0.4699179977077324,RIS,

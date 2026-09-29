@@ -1,0 +1,77 @@
+# ---------------------------------------------------------------- RESTRICTED
+# Third-party research data. Never commit. See data/README.md.
+data/restricted/
+**/fire_reference_inventory*
+**/fig_gt_fires.*
+**/landcover_2018*.tif
+**/landcover_*.tif
+
+# ------------------------------------------------- Large / derived data
+data/raw/
+data/processed/
+data/external/
+*.npy
+*.npz
+*.tif
+*.tiff
+*.hgt
+*.hgt.gz
+*.gpkg
+*.shp
+*.shx
+*.dbf
+*.sbn
+*.sbx
+!data/roi/fig_roi_polygon.*
+
+# Model weights (see README - redistribution pending)
+*.pt
+*.pth
+*.pkl
+!configs/scaler.pkl
+
+# Restricted-derived spatial outputs — block BOTH the .csv and .md renderings
+outputs/inference_10m/
+outputs/inference_30m/
+outputs/**/units*.csv
+outputs/**/units*.md
+outputs/**/*_units_*.csv
+outputs/**/*_units_*.md
+outputs/**/*burned_spatial_units*
+outputs/**/*burned_zone_inventory*
+outputs/**/*global_ranking_top*
+outputs/**/*within_class_top5*
+outputs/**/*hidden_units*
+
+# --------------------------------------------------------- Manuscript
+*.docx
+*.doc
+revision/
+
+# -------------------------------------------------------- Logs / temp
+*.log
+**/_stale/
+**/_pilot/
+**/_salvage_check/
+scratchpad/
+
+# ------------------------------------------------ Credentials / env
+.env
+.env.*
+*credentials*
+*.key
+*.pem
+.earthengine/
+service-account*.json
+
+# ------------------------------------------------------ Python / OS
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

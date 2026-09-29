@@ -1,0 +1,766 @@
+{
+  "submitted_tasks": [
+    {
+      "m_idx": 0,
+      "year": 2017,
+      "month": 1,
+      "task_id": "HKQRYO5S5QT4ZMSRINQZ5OTS",
+      "filename": "features_m000.tif"
+    },
+    {
+      "m_idx": 1,
+      "year": 2017,
+      "month": 2,
+      "task_id": "MCPFP3LKCKQ3PAOCS5ZG3LC2",
+      "filename": "features_m001.tif"
+    },
+    {
+      "m_idx": 2,
+      "year": 2017,
+      "month": 3,
+      "task_id": "FROYTXB66YVYWKJDBSXKYXDK",
+      "filename": "features_m002.tif"
+    },
+    {
+      "m_idx": 3,
+      "year": 2017,
+      "month": 4,
+      "task_id": "VV7VOQJCA3MGLYTN4TEDWDJ2",
+      "filename": "features_m003.tif"
+    },
+    {
+      "m_idx": 4,
+      "year": 2017,
+      "month": 5,
+      "task_id": "SPZD6SN7UT366CGC44DZITU4",
+      "filename": "features_m004.tif"
+    },
+    {
+      "m_idx": 5,
+      "year": 2017,
+      "month": 6,
+      "task_id": "42TQ4SYCCZB2WEJVXHRC4ZBP",
+      "filename": "features_m005.tif"
+    },
+    {
+      "m_idx": 6,
+      "year": 2017,
+      "month": 7,
+      "task_id": "LRXO3P3NBZEIQSCBOSG73CUO",
+      "filename": "features_m006.tif"
+    },
+    {
+      "m_idx": 7,
+      "year": 2017,
+      "month": 8,
+      "task_id": "NIYRWNNFTIS5QVXDRM3UQXZR",
+      "filename": "features_m007.tif"
+    },
+    {
+      "m_idx": 8,
+      "year": 2017,
+      "month": 9,
+      "task_id": "OQ5IEFJRXSKC4PQDN45DC7DW",
+      "filename": "features_m008.tif"
+    },
+    {
+      "m_idx": 9,
+      "year": 2017,
+      "month": 10,
+      "task_id": "CN33ZYCAZX3AF3YWYGQQILPI",
+      "filename": "features_m009.tif"
+    },
+    {
+      "m_idx": 10,
+      "year": 2017,
+      "month": 11,
+      "task_id": "YURJUEVQMMFIAMLMEOYTTUOQ",
+      "filename": "features_m010.tif"
+    },
+    {
+      "m_idx": 11,
+      "year": 2017,
+      "month": 12,
+      "task_id": "YUMXXTZK7VDUUG3YFM4OAZA7",
+      "filename": "features_m011.tif"
+    },
+    {
+      "m_idx": 12,
+      "year": 2018,
+      "month": 1,
+      "task_id": "5T2FOAI7SCFCMFRELLN75V7S",
+      "filename": "features_m012.tif"
+    },
+    {
+      "m_idx": 13,
+      "year": 2018,
+      "month": 2,
+      "task_id": "EC4FEJ765JKHVPVHVRSYEYH4",
+      "filename": "features_m013.tif"
+    },
+    {
+      "m_idx": 14,
+      "year": 2018,
+      "month": 3,
+      "task_id": "FRU4QPM3SL2UTCZ4BPFDIWGE",
+      "filename": "features_m014.tif"
+    },
+    {
+      "m_idx": 15,
+      "year": 2018,
+      "month": 4,
+      "task_id": "5FECX5IYOHWCIM7BM2BJINZY",
+      "filename": "features_m015.tif"
+    },
+    {
+      "m_idx": 16,
+      "year": 2018,
+      "month": 5,
+      "task_id": "ZMGD6ADBVQGCUSPZ2JGUZKGP",
+      "filename": "features_m016.tif"
+    },
+    {
+      "m_idx": 17,
+      "year": 2018,
+      "month": 6,
+      "task_id": "GEWKPNN65P2T3FYOVZELNT4J",
+      "filename": "features_m017.tif"
+    },
+    {
+      "m_idx": 18,
+      "year": 2018,
+      "month": 7,
+      "task_id": "B4RNMU2VHJGXZ2V2PTEHYDZ6",
+      "filename": "features_m018.tif"
+    },
+    {
+      "m_idx": 19,
+      "year": 2018,
+      "month": 8,
+      "task_id": "5TOTB2Y6FN4YPAFJV2VWMCGA",
+      "filename": "features_m019.tif"
+    },
+    {
+      "m_idx": 20,
+      "year": 2018,
+      "month": 9,
+      "task_id": "Z5JZIISCQCUV7OZ2XPQ4UIRB",
+      "filename": "features_m020.tif"
+    },
+    {
+      "m_idx": 21,
+      "year": 2018,
+      "month": 10,
+      "task_id": "RCRBHFLTA4OJNQDV6AOJKA5A",
+      "filename": "features_m021.tif"
+    },
+    {
+      "m_idx": 22,
+      "year": 2018,
+      "month": 11,
+      "task_id": "A4RJBMGULK5WKDNU5DRASV3N",
+      "filename": "features_m022.tif"
+    },
+    {
+      "m_idx": 23,
+      "year": 2018,
+      "month": 12,
+      "task_id": "HXQOGJDTKBAWCEWB7EOQJDD6",
+      "filename": "features_m023.tif"
+    },
+    {
+      "m_idx": 24,
+      "year": 2019,
+      "month": 1,
+      "task_id": "4VPALBCPIGUIBNEPYLGNW5LQ",
+      "filename": "features_m024.tif"
+    },
+    {
+      "m_idx": 25,
+      "year": 2019,
+      "month": 2,
+      "task_id": "DUAAJYKWJN7TS4AWCAI6GJKG",
+      "filename": "features_m025.tif"
+    },
+    {
+      "m_idx": 26,
+      "year": 2019,
+      "month": 3,
+      "task_id": "RUDWIJTFAMZDUDV3GTFOSJQ5",
+      "filename": "features_m026.tif"
+    },
+    {
+      "m_idx": 27,
+      "year": 2019,
+      "month": 4,
+      "task_id": "ENU7IZVYE337ENIUP7XB2CSA",
+      "filename": "features_m027.tif"
+    },
+    {
+      "m_idx": 28,
+      "year": 2019,
+      "month": 5,
+      "task_id": "Q55D3NGTEWAIRCWICF2HTLYV",
+      "filename": "features_m028.tif"
+    },
+    {
+      "m_idx": 29,
+      "year": 2019,
+      "month": 6,
+      "task_id": "75SPDCHDS5D733SYMNDYQAD3",
+      "filename": "features_m029.tif"
+    },
+    {
+      "m_idx": 30,
+      "year": 2019,
+      "month": 7,
+      "task_id": "MM2AAVZPAPW2LPOTKWVLOEWB",
+      "filename": "features_m030.tif"
+    },
+    {
+      "m_idx": 31,
+      "year": 2019,
+      "month": 8,
+      "task_id": "NFQJULASSGGJSFYMWFS72IJK",
+      "filename": "features_m031.tif"
+    },
+    {
+      "m_idx": 32,
+      "year": 2019,
+      "month": 9,
+      "task_id": "A54EWUMNGLP7ZJ2T6KPTOFHV",
+      "filename": "features_m032.tif"
+    },
+    {
+      "m_idx": 33,
+      "year": 2019,
+      "month": 10,
+      "task_id": "U7AQLORT5E2T2FUN4CLHVL3P",
+      "filename": "features_m033.tif"
+    },
+    {
+      "m_idx": 34,
+      "year": 2019,
+      "month": 11,
+      "task_id": "EBGDA7AOK3PADWWNUPPBLIBN",
+      "filename": "features_m034.tif"
+    },
+    {
+      "m_idx": 35,
+      "year": 2019,
+      "month": 12,
+      "task_id": "UDYM6SZEQJAYDU46OEQEM7Z3",
+      "filename": "features_m035.tif"
+    },
+    {
+      "m_idx": 36,
+      "year": 2020,
+      "month": 1,
+      "task_id": "M3HBCK3IVOJBFBP4OOZ4TFL3",
+      "filename": "features_m036.tif"
+    },
+    {
+      "m_idx": 37,
+      "year": 2020,
+      "month": 2,
+      "task_id": "CNOZ6EMINPAIUHGPWSEICBS7",
+      "filename": "features_m037.tif"
+    },
+    {
+      "m_idx": 38,
+      "year": 2020,
+      "month": 3,
+      "task_id": "CU2V7ADDJPDN2L4GI4QEV2RO",
+      "filename": "features_m038.tif"
+    },
+    {
+      "m_idx": 39,
+      "year": 2020,
+      "month": 4,
+      "task_id": "B6LZ5GV4EJWG7CLY2NOIDWGH",
+      "filename": "features_m039.tif"
+    },
+    {
+      "m_idx": 40,
+      "year": 2020,
+      "month": 5,
+      "task_id": "7UFMUDI4XHPHXG5626AAUATI",
+      "filename": "features_m040.tif"
+    },
+    {
+      "m_idx": 41,
+      "year": 2020,
+      "month": 6,
+      "task_id": "LG2WQAUQD4O5TVEUOVDBO72P",
+      "filename": "features_m041.tif"
+    },
+    {
+      "m_idx": 42,
+      "year": 2020,
+      "month": 7,
+      "task_id": "EWPD6EQAPXOHA2L5WVLDW2AL",
+      "filename": "features_m042.tif"
+    },
+    {
+      "m_idx": 43,
+      "year": 2020,
+      "month": 8,
+      "task_id": "NDWZTXTABLUSVDH4CIEGDCO5",
+      "filename": "features_m043.tif"
+    },
+    {
+      "m_idx": 44,
+      "year": 2020,
+      "month": 9,
+      "task_id": "FXYTNEDGOPDCNED7GG7X4SNA",
+      "filename": "features_m044.tif"
+    },
+    {
+      "m_idx": 45,
+      "year": 2020,
+      "month": 10,
+      "task_id": "TIWBAFUH5LJCLQKVTIQSLC43",
+      "filename": "features_m045.tif"
+    },
+    {
+      "m_idx": 46,
+      "year": 2020,
+      "month": 11,
+      "task_id": "D4LJHQINCV2UALP4N47V6GHN",
+      "filename": "features_m046.tif"
+    },
+    {
+      "m_idx": 47,
+      "year": 2020,
+      "month": 12,
+      "task_id": "SN6WOJM6DV4TGF45QLJR6DEM",
+      "filename": "features_m047.tif"
+    },
+    {
+      "m_idx": 48,
+      "year": 2021,
+      "month": 1,
+      "task_id": "L7JXHQ6JZX7GMKHXPMHMSYZJ",
+      "filename": "features_m048.tif"
+    },
+    {
+      "m_idx": 49,
+      "year": 2021,
+      "month": 2,
+      "task_id": "Z5RB7K256GU2462TEJRXUQG2",
+      "filename": "features_m049.tif"
+    },
+    {
+      "m_idx": 50,
+      "year": 2021,
+      "month": 3,
+      "task_id": "D6AV4PYB3AVJ4BU4BTGFVHEL",
+      "filename": "features_m050.tif"
+    },
+    {
+      "m_idx": 51,
+      "year": 2021,
+      "month": 4,
+      "task_id": "PHLCAPUWKMCGINOOQI6WAF4V",
+      "filename": "features_m051.tif"
+    },
+    {
+      "m_idx": 52,
+      "year": 2021,
+      "month": 5,
+      "task_id": "UJXMWM77XALJDLVTIEEISDWG",
+      "filename": "features_m052.tif"
+    },
+    {
+      "m_idx": 53,
+      "year": 2021,
+      "month": 6,
+      "task_id": "DMIFAN6WDOAGYI7FTNAEJWZ6",
+      "filename": "features_m053.tif"
+    },
+    {
+      "m_idx": 54,
+      "year": 2021,
+      "month": 7,
+      "task_id": "XI3U7M5GHG66UHPWM2MPLK5B",
+      "filename": "features_m054.tif"
+    },
+    {
+      "m_idx": 55,
+      "year": 2021,
+      "month": 8,
+      "task_id": "YOXOC5U75ESRQKLQVLQGB5XI",
+      "filename": "features_m055.tif"
+    },
+    {
+      "m_idx": 56,
+      "year": 2021,
+      "month": 9,
+      "task_id": "FBXETOYT5FOYFV6DMBFJ5HSG",
+      "filename": "features_m056.tif"
+    },
+    {
+      "m_idx": 57,
+      "year": 2021,
+      "month": 10,
+      "task_id": "5GFTIWRMYKD5OCJ7RAPZXSG5",
+      "filename": "features_m057.tif"
+    },
+    {
+      "m_idx": 58,
+      "year": 2021,
+      "month": 11,
+      "task_id": "RKATROEBR3RDTLMVLNU2SKIZ",
+      "filename": "features_m058.tif"
+    },
+    {
+      "m_idx": 59,
+      "year": 2021,
+      "month": 12,
+      "task_id": "NLWK26BZSCO2KR4UKRZIQEHZ",
+      "filename": "features_m059.tif"
+    },
+    {
+      "m_idx": 60,
+      "year": 2022,
+      "month": 1,
+      "task_id": "GDEOEZU5CKD6UFFB7VEHHAKO",
+      "filename": "features_m060.tif"
+    },
+    {
+      "m_idx": 61,
+      "year": 2022,
+      "month": 2,
+      "task_id": "7YWJBARE6QIVJHAZ7GB4KESU",
+      "filename": "features_m061.tif"
+    },
+    {
+      "m_idx": 62,
+      "year": 2022,
+      "month": 3,
+      "task_id": "PO5UAVCVPYBG6JOJ5GVU2TGU",
+      "filename": "features_m062.tif"
+    },
+    {
+      "m_idx": 63,
+      "year": 2022,
+      "month": 4,
+      "task_id": "SFNWPNB3Q22BZX46JIZ6YQCN",
+      "filename": "features_m063.tif"
+    },
+    {
+      "m_idx": 64,
+      "year": 2022,
+      "month": 5,
+      "task_id": "Z5OSZAVJEBIEG4JIGGJI7SE6",
+      "filename": "features_m064.tif"
+    },
+    {
+      "m_idx": 65,
+      "year": 2022,
+      "month": 6,
+      "task_id": "DTJV5F7F5476VSTUIZQMTYKW",
+      "filename": "features_m065.tif"
+    },
+    {
+      "m_idx": 66,
+      "year": 2022,
+      "month": 7,
+      "task_id": "A5S2UDVOZZBE2CI7X4BWAGWH",
+      "filename": "features_m066.tif"
+    },
+    {
+      "m_idx": 67,
+      "year": 2022,
+      "month": 8,
+      "task_id": "73WCV6T54L7SEC3KLY5QVVQ7",
+      "filename": "features_m067.tif"
+    },
+    {
+      "m_idx": 68,
+      "year": 2022,
+      "month": 9,
+      "task_id": "F2U27EPGSKSEOAHENTEAHMJZ",
+      "filename": "features_m068.tif"
+    },
+    {
+      "m_idx": 69,
+      "year": 2022,
+      "month": 10,
+      "task_id": "S4JWUQIEEBAB76VTMXXO6XAD",
+      "filename": "features_m069.tif"
+    },
+    {
+      "m_idx": 70,
+      "year": 2022,
+      "month": 11,
+      "task_id": "QEQUEOQEKHIPBAHRUIYBMED4",
+      "filename": "features_m070.tif"
+    },
+    {
+      "m_idx": 71,
+      "year": 2022,
+      "month": 12,
+      "task_id": "CRJ5Z7DFVUB7U53N2ACXC3RN",
+      "filename": "features_m071.tif"
+    },
+    {
+      "m_idx": 72,
+      "year": 2023,
+      "month": 1,
+      "task_id": "TS3QETFJLEC7IQSCRQZHLTHA",
+      "filename": "features_m072.tif"
+    },
+    {
+      "m_idx": 73,
+      "year": 2023,
+      "month": 2,
+      "task_id": "5AHJZLKXRS55GNKSH6IB2ALJ",
+      "filename": "features_m073.tif"
+    },
+    {
+      "m_idx": 74,
+      "year": 2023,
+      "month": 3,
+      "task_id": "BYUTLHG6NDLW3M3FUUUBI7BD",
+      "filename": "features_m074.tif"
+    },
+    {
+      "m_idx": 75,
+      "year": 2023,
+      "month": 4,
+      "task_id": "MVJACMYGCI3BK62LW4XIYDOF",
+      "filename": "features_m075.tif"
+    },
+    {
+      "m_idx": 76,
+      "year": 2023,
+      "month": 5,
+      "task_id": "JP4BPG7E4MI3JY35LZJ3FVIR",
+      "filename": "features_m076.tif"
+    },
+    {
+      "m_idx": 77,
+      "year": 2023,
+      "month": 6,
+      "task_id": "I27E2WSVCCCL6DKJN4TP3SUQ",
+      "filename": "features_m077.tif"
+    },
+    {
+      "m_idx": 78,
+      "year": 2023,
+      "month": 7,
+      "task_id": "7BQ63RJLYFKJWTQRMKGGLW47",
+      "filename": "features_m078.tif"
+    },
+    {
+      "m_idx": 79,
+      "year": 2023,
+      "month": 8,
+      "task_id": "P5TAV3TG43YX5LUDDNZOZMR7",
+      "filename": "features_m079.tif"
+    },
+    {
+      "m_idx": 80,
+      "year": 2023,
+      "month": 9,
+      "task_id": "ZBDOQORQLXMWRCGS5WL7NMFR",
+      "filename": "features_m080.tif"
+    },
+    {
+      "m_idx": 81,
+      "year": 2023,
+      "month": 10,
+      "task_id": "GOKIYCZKMUC3GOS3VBTUTM4Q",
+      "filename": "features_m081.tif"
+    },
+    {
+      "m_idx": 82,
+      "year": 2023,
+      "month": 11,
+      "task_id": "L4XI35DA4FYT726ZYUVCU6OH",
+      "filename": "features_m082.tif"
+    },
+    {
+      "m_idx": 83,
+      "year": 2023,
+      "month": 12,
+      "task_id": "XVGZYFE3TKXST2CUWW3HXZMI",
+      "filename": "features_m083.tif"
+    },
+    {
+      "m_idx": 84,
+      "year": 2024,
+      "month": 1,
+      "task_id": "WDVC2SOPH2JKHRPFEIJXNZ7E",
+      "filename": "features_m084.tif"
+    },
+    {
+      "m_idx": 85,
+      "year": 2024,
+      "month": 2,
+      "task_id": "E5DYLQOPPDFE4TMH6PPTOASF",
+      "filename": "features_m085.tif"
+    },
+    {
+      "m_idx": 86,
+      "year": 2024,
+      "month": 3,
+      "task_id": "5HSXXTYOA4PG55UUIH6YS65U",
+      "filename": "features_m086.tif"
+    },
+    {
+      "m_idx": 87,
+      "year": 2024,
+      "month": 4,
+      "task_id": "T42V5UZ7W4FE72XVB3MUGFQN",
+      "filename": "features_m087.tif"
+    },
+    {
+      "m_idx": 88,
+      "year": 2024,
+      "month": 5,
+      "task_id": "5CUTIKLVP3JYH6AYLYYKWQ2H",
+      "filename": "features_m088.tif"
+    },
+    {
+      "m_idx": 89,
+      "year": 2024,
+      "month": 6,
+      "task_id": "4LKOPNBLRAVLYSYFYAXRHACF",
+      "filename": "features_m089.tif"
+    },
+    {
+      "m_idx": 90,
+      "year": 2024,
+      "month": 7,
+      "task_id": "X32TQPETDKQQZUZB5XJARGDB",
+      "filename": "features_m090.tif"
+    },
+    {
+      "m_idx": 91,
+      "year": 2024,
+      "month": 8,
+      "task_id": "LDNIAF4XWSUQ3C7NPBEJ6DO3",
+      "filename": "features_m091.tif"
+    },
+    {
+      "m_idx": 92,
+      "year": 2024,
+      "month": 9,
+      "task_id": "LABN3IBYIVWFWSO2EQJPWPD4",
+      "filename": "features_m092.tif"
+    },
+    {
+      "m_idx": 93,
+      "year": 2024,
+      "month": 10,
+      "task_id": "35COVOLAUAEAMNF763OH2W6S",
+      "filename": "features_m093.tif"
+    },
+    {
+      "m_idx": 94,
+      "year": 2024,
+      "month": 11,
+      "task_id": "WSOFRDZ6HBPUW46YZGP4S4WK",
+      "filename": "features_m094.tif"
+    },
+    {
+      "m_idx": 95,
+      "year": 2024,
+      "month": 12,
+      "task_id": "EXRLGQFDTESL25BSV6RJLDVJ",
+      "filename": "features_m095.tif"
+    },
+    {
+      "m_idx": 96,
+      "year": 2025,
+      "month": 1,
+      "task_id": "LPT5DTFUK6DYWEBDLQ5Y3PY4",
+      "filename": "features_m096.tif"
+    },
+    {
+      "m_idx": 97,
+      "year": 2025,
+      "month": 2,
+      "task_id": "NRNESJG5WXJ5O4GORXE4VPIQ",
+      "filename": "features_m097.tif"
+    },
+    {
+      "m_idx": 98,
+      "year": 2025,
+      "month": 3,
+      "task_id": "K7K4TZCJH7O53HTCOOGQPEFM",
+      "filename": "features_m098.tif"
+    },
+    {
+      "m_idx": 99,
+      "year": 2025,
+      "month": 4,
+      "task_id": "RZOYMMJXYJTS55RZTNFROXP2",
+      "filename": "features_m099.tif"
+    },
+    {
+      "m_idx": 100,
+      "year": 2025,
+      "month": 5,
+      "task_id": "3OVHF4CUAS7D433DHTJ6WE6S",
+      "filename": "features_m100.tif"
+    },
+    {
+      "m_idx": 101,
+      "year": 2025,
+      "month": 6,
+      "task_id": "KR2ZRRLVEAD5TUCYT3HGJNEP",
+      "filename": "features_m101.tif"
+    },
+    {
+      "m_idx": 102,
+      "year": 2025,
+      "month": 7,
+      "task_id": "WZ4GDCYWICKPTCT7QWNVZ2U5",
+      "filename": "features_m102.tif"
+    },
+    {
+      "m_idx": 103,
+      "year": 2025,
+      "month": 8,
+      "task_id": "RULKSINIQZFC2OMOE6E74OGH",
+      "filename": "features_m103.tif"
+    },
+    {
+      "m_idx": 104,
+      "year": 2025,
+      "month": 9,
+      "task_id": "QKZ67UE3FG6PQCN67C3EMDSX",
+      "filename": "features_m104.tif"
+    },
+    {
+      "m_idx": 105,
+      "year": 2025,
+      "month": 10,
+      "task_id": "FNVXUXRWMLQKT2XJRWA4OSPU",
+      "filename": "features_m105.tif"
+    },
+    {
+      "m_idx": 106,
+      "year": 2025,
+      "month": 11,
+      "task_id": "I7PW66TWVNGNO37RQAJJTKMN",
+      "filename": "features_m106.tif"
+    },
+    {
+      "m_idx": 107,
+      "year": 2025,
+      "month": 12,
+      "task_id": "T7TSLAVVHJMHEJ3TF4YWCP5T",
+      "filename": "features_m107.tif"
+    }
+  ],
+  "missing_months": [],
+  "scale": 30,
+  "folder": "feature_stack_v3_30m",
+  "n_bands": 46,
+  "n_model_features": 52,
+  "note": "delta_* and month_* features are added in Notebook 07b"
+}

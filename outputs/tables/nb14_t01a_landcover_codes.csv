@@ -1,0 +1,12 @@
+code,land_cover,n_px_eligible,n_px_reference_burned,n_px_model_detected
+0,unclassified / other code,696,0,6
+10,forest,59429,4218,6784
+11,orchards,117870,456,601
+20,shrubland,78645,7061,16252
+30,grassland,221358,14120,35061
+40,cropland,907519,5751,10449
+41,covered agriculture,35492,32,637
+50,built-up,9092,69,203
+60,bare,353122,460,1508
+61,fallow,37501,935,3967
+80,water,664,55,24

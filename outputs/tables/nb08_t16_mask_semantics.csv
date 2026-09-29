@@ -1,0 +1,9 @@
+quantity,count,pct_of_eligible
+eligible 30 m pixels,1821388,100.0
+burned_prob > 0.502 (the display mask),75492,4.144751145829444
+model_recurrence >= 1 month,75492,4.144751145829444
+documented burned (merged inventory),26533,1.4567461737971261
+severity >= 0.5 (the Table 19 criterion),280461,15.398201810926611
+severity >= 0.5 AND burned_prob > 0.502,49652,2.72605287835431
+severity >= 0.5 AND NOT flagged as burned,230809,12.672148932572302
+severity >= 0.5 AND documented burned,14744,0.809492540853459

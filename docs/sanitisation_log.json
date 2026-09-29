@@ -1,0 +1,174 @@
+[
+ [
+  "pipeline_10m/run_pipeline.sh",
+  [
+   "abs project root",
+   "interpreter path"
+  ]
+ ],
+ [
+  "pipeline_10m/table20_10m.py",
+  [
+   "abs project root"
+  ]
+ ],
+ [
+  "pipeline_10m/build_10m_sources.py",
+  [
+   "abs project root"
+  ]
+ ],
+ [
+  "pipeline_10m/run_inference_10m.py",
+  [
+   "abs project root"
+  ]
+ ],
+ [
+  "pipeline_10m/figures_10m.py",
+  [
+   "abs project root"
+  ]
+ ],
+ [
+  "pipeline_10m/apply_exceptions.py",
+  [
+   "abs project root"
+  ]
+ ],
+ [
+  "pipeline_10m/validate_salvage.py",
+  [
+   "abs project root",
+   "interpreter path"
+  ]
+ ],
+ [
+  "pipeline_10m/polygon_10m.py",
+  [
+   "abs project root"
+  ]
+ ],
+ [
+  "pipeline_10m/tables_412_10m.py",
+  [
+   "abs project root"
+  ]
+ ],
+ [
+  "pipeline_10m/migration_table.py",
+  [
+   "abs project root"
+  ]
+ ],
+ [
+  "pipeline_10m/geometries_10m.py",
+  [
+   "abs project root"
+  ]
+ ],
+ [
+  "pipeline_10m/verify_tile.py",
+  [
+   "abs project path"
+  ]
+ ],
+ [
+  "pipeline_10m/qa_10m.py",
+  [
+   "abs project root"
+  ]
+ ],
+ [
+  "pipeline_10m/mosaic_10m.py",
+  [
+   "abs project root"
+  ]
+ ],
+ [
+  "supplementary_30m/14_landuse_presentation.ipynb",
+  [
+   "abs project path",
+   "abs project root"
+  ]
+ ],
+ [
+  "supplementary_30m/13_landcover_timing_diagnostic.ipynb",
+  [
+   "abs project path",
+   "abs project root"
+  ]
+ ],
+ [
+  "figures/22_study_area_environment.py",
+  [
+   "abs project root"
+  ]
+ ],
+ [
+  "configs/config.py",
+  [
+   "GEE project id"
+  ]
+ ],
+ [
+  "outputs/provenance/nbr_export_provenance.json",
+  [
+   "GEE project id"
+  ]
+ ],
+ [
+  "notebooks/05_main_model.ipynb",
+  [
+   "GEE project id"
+  ]
+ ],
+ [
+  "notebooks/08_target_diagnostics.ipynb",
+  [
+   "abs project root"
+  ]
+ ],
+ [
+  "notebooks/06_experiments.ipynb",
+  [
+   "GEE project id"
+  ]
+ ],
+ [
+  "notebooks/04_data_prep.ipynb",
+  [
+   "GEE project id"
+  ]
+ ],
+ [
+  "gee/export_landcover_2018_30m.py",
+  [
+   "GEE project id"
+  ]
+ ],
+ [
+  "gee/02_sampling_computepixels.ipynb",
+  [
+   "GEE project id"
+  ]
+ ],
+ [
+  "gee/export_nbr_2017_2025_30m.py",
+  [
+   "GEE project id"
+  ]
+ ],
+ [
+  "gee/check_2016_assets.py",
+  [
+   "GEE project id"
+  ]
+ ],
+ [
+  "gee/01_data_to_gee.ipynb",
+  [
+   "GEE project id"
+  ]
+ ]
+]

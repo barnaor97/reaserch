@@ -1,0 +1,165 @@
+{
+  "experiment_name": "exp7_ablations_no_final_mlp",
+  "burned_detection": {
+    "auc": 0.9865989070749444,
+    "threshold": 0.5172361809045226,
+    "precision": 0.7283810743577744,
+    "recall": 0.5844697418870312,
+    "f1": 0.6485378129146153,
+    "confusion_matrix": [
+      [
+        9520734,
+        11028
+      ],
+      [
+        21025,
+        29573
+      ]
+    ]
+  },
+  "correlations": {
+    "severity": {
+      "pearson": 0.7554808855056763,
+      "pearson_pvalue": 0.0,
+      "spearman": 0.6892698737547117,
+      "spearman_pvalue": 0.0
+    },
+    "persistence": {
+      "pearson": 0.4895465672016144,
+      "pearson_pvalue": 0.0,
+      "spearman": 0.4307528449830569,
+      "spearman_pvalue": 0.0
+    },
+    "recovery_gap": {
+      "pearson": 0.6880413293838501,
+      "pearson_pvalue": 0.0,
+      "spearman": 0.6194618108740089,
+      "spearman_pvalue": 0.0
+    }
+  },
+  "per_category": {
+    "no_fires": {
+      "n": 45669,
+      "severity": 0.25262027978897095,
+      "persistence": 0.5090225338935852,
+      "recovery_gap": 0.29582443833351135
+    },
+    "low_recurrence": {
+      "n": 44972,
+      "severity": 0.5825205445289612,
+      "persistence": 0.5832213163375854,
+      "recovery_gap": 0.49551627039909363
+    },
+    "medium_recurrence": {
+      "n": 648,
+      "severity": 0.7055402398109436,
+      "persistence": 0.638936460018158,
+      "recovery_gap": 0.6581395268440247
+    },
+    "high_recurrence": {
+      "n": 50,
+      "severity": 0.5818617343902588,
+      "persistence": 0.6094838380813599,
+      "recovery_gap": 0.502704381942749
+    }
+  },
+  "training": {
+    "best_val_auc": 0.986669553757745,
+    "n_epochs": 50
+  },
+  "model_info": {
+    "n_parameters": 49668,
+    "ablation": {
+      "d_model": 128,
+      "n_head": 4,
+      "d_k": 32,
+      "tau": 10000,
+      "dropout": 0.1,
+      "use_pos_enc": true,
+      "mlp_dims": null
+    },
+    "loss_type": "MaskedMultiTaskLoss"
+  },
+  "per_lc": {
+    "forest": {
+      "code": 10,
+      "n": 7294,
+      "burned_prob_mean": 0.07810024172067642,
+      "severity": 0.5369349718093872,
+      "persistence": 0.5545228719711304,
+      "recovery_gap": 0.24050776660442352
+    },
+    "orchards": {
+      "code": 11,
+      "n": 3881,
+      "burned_prob_mean": 0.06276398152112961,
+      "severity": 0.1907210648059845,
+      "persistence": 0.3163546025753021,
+      "recovery_gap": 0.16620828211307526
+    },
+    "shrubland": {
+      "code": 20,
+      "n": 12488,
+      "burned_prob_mean": 0.08720652014017105,
+      "severity": 0.6008695960044861,
+      "persistence": 0.6025583148002625,
+      "recovery_gap": 0.4798104763031006
+    },
+    "grassland": {
+      "code": 30,
+      "n": 24869,
+      "burned_prob_mean": 0.07329096645116806,
+      "severity": 0.5809279084205627,
+      "persistence": 0.5714818239212036,
+      "recovery_gap": 0.5490415096282959
+    },
+    "cropland": {
+      "code": 40,
+      "n": 29154,
+      "burned_prob_mean": 0.06393789499998093,
+      "severity": 0.2820090055465698,
+      "persistence": 0.5368717312812805,
+      "recovery_gap": 0.39881372451782227
+    },
+    "covered_agriculture": {
+      "code": 41,
+      "n": 937,
+      "burned_prob_mean": 0.015472539700567722,
+      "severity": 0.2583308517932892,
+      "persistence": 0.44627854228019714,
+      "recovery_gap": 0.22457872331142426
+    },
+    "built_up": {
+      "code": 50,
+      "n": 654,
+      "burned_prob_mean": 0.05525540933012962,
+      "severity": 0.44935956597328186,
+      "persistence": 0.5513285994529724,
+      "recovery_gap": 0.3700302541255951
+    },
+    "bare": {
+      "code": 60,
+      "n": 9919,
+      "burned_prob_mean": 0.01910599134862423,
+      "severity": 0.18169859051704407,
+      "persistence": 0.5429590344429016,
+      "recovery_gap": 0.11795807629823685
+    },
+    "fallow": {
+      "code": 61,
+      "n": 1766,
+      "burned_prob_mean": 0.06454556435346603,
+      "severity": 0.4899495840072632,
+      "persistence": 0.5500497817993164,
+      "recovery_gap": 0.5228577256202698
+    },
+    "water": {
+      "code": 80,
+      "n": 377,
+      "burned_prob_mean": 0.03578551858663559,
+      "severity": 0.4981957674026489,
+      "persistence": 0.3252156674861908,
+      "recovery_gap": 0.0738159716129303
+    }
+  }
+}

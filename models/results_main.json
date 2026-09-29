@@ -1,0 +1,224 @@
+{
+  "experiment_name": "main_model_random_split",
+  "burned_detection": {
+    "auc": 0.9882714467313802,
+    "threshold": 0.502462311557789,
+    "precision": 0.7136487716105551,
+    "recall": 0.6200245068975059,
+    "f1": 0.6635504135028236,
+    "confusion_matrix": [
+      [
+        9519174,
+        12588
+      ],
+      [
+        19226,
+        31372
+      ]
+    ]
+  },
+  "correlations": {
+    "severity": {
+      "pearson": 0.7739571332931519,
+      "pearson_pvalue": 0.0,
+      "spearman": 0.6983308321131166,
+      "spearman_pvalue": 0.0
+    },
+    "persistence": {
+      "pearson": 0.5229458808898926,
+      "pearson_pvalue": 0.0,
+      "spearman": 0.4615071073674443,
+      "spearman_pvalue": 0.0
+    },
+    "recovery_gap": {
+      "pearson": 0.6920905709266663,
+      "pearson_pvalue": 0.0,
+      "spearman": 0.6221810160621221,
+      "spearman_pvalue": 0.0
+    }
+  },
+  "per_category": {
+    "no_fires": {
+      "n": 45669,
+      "severity": 0.26148250699043274,
+      "persistence": 0.5066217184066772,
+      "recovery_gap": 0.3202401101589203
+    },
+    "low_recurrence": {
+      "n": 44972,
+      "severity": 0.5851548314094543,
+      "persistence": 0.5924262404441833,
+      "recovery_gap": 0.5071908831596375
+    },
+    "medium_recurrence": {
+      "n": 648,
+      "severity": 0.6972046494483948,
+      "persistence": 0.6532540321350098,
+      "recovery_gap": 0.6697229743003845
+    },
+    "high_recurrence": {
+      "n": 50,
+      "severity": 0.6028913259506226,
+      "persistence": 0.6426367163658142,
+      "recovery_gap": 0.5199059844017029
+    }
+  },
+  "per_lc": {
+    "forest": {
+      "code": 10,
+      "n": 7294,
+      "burned_prob_mean": 0.07429124414920807,
+      "severity": 0.5385135412216187,
+      "persistence": 0.5655695796012878,
+      "recovery_gap": 0.2501073479652405
+    },
+    "orchards": {
+      "code": 11,
+      "n": 3881,
+      "burned_prob_mean": 0.06449445337057114,
+      "severity": 0.20852471888065338,
+      "persistence": 0.33417651057243347,
+      "recovery_gap": 0.17509491741657257
+    },
+    "shrubland": {
+      "code": 20,
+      "n": 12488,
+      "burned_prob_mean": 0.08224062621593475,
+      "severity": 0.602862536907196,
+      "persistence": 0.6099825501441956,
+      "recovery_gap": 0.4901280105113983
+    },
+    "grassland": {
+      "code": 30,
+      "n": 24869,
+      "burned_prob_mean": 0.06993294507265091,
+      "severity": 0.5841973423957825,
+      "persistence": 0.5773913860321045,
+      "recovery_gap": 0.5644159913063049
+    },
+    "cropland": {
+      "code": 40,
+      "n": 29154,
+      "burned_prob_mean": 0.06246092915534973,
+      "severity": 0.29085639119148254,
+      "persistence": 0.5416751503944397,
+      "recovery_gap": 0.38912537693977356
+    },
+    "covered_agriculture": {
+      "code": 41,
+      "n": 937,
+      "burned_prob_mean": 0.025882389396429062,
+      "severity": 0.1274072676897049,
+      "persistence": 0.432624489068985,
+      "recovery_gap": 0.2007024586200714
+    },
+    "built_up": {
+      "code": 50,
+      "n": 654,
+      "burned_prob_mean": 0.05381070822477341,
+      "severity": 0.4504118859767914,
+      "persistence": 0.5604002475738525,
+      "recovery_gap": 0.38111013174057007
+    },
+    "bare": {
+      "code": 60,
+      "n": 9919,
+      "burned_prob_mean": 0.020858854055404663,
+      "severity": 0.20178253948688507,
+      "persistence": 0.5205564498901367,
+      "recovery_gap": 0.25048622488975525
+    },
+    "fallow": {
+      "code": 61,
+      "n": 1766,
+      "burned_prob_mean": 0.06395750492811203,
+      "severity": 0.48502516746520996,
+      "persistence": 0.5567724704742432,
+      "recovery_gap": 0.5336385369300842
+    },
+    "water": {
+      "code": 80,
+      "n": 377,
+      "burned_prob_mean": 0.04363980516791344,
+      "severity": 0.5129784941673279,
+      "persistence": 0.3331560492515564,
+      "recovery_gap": 0.06514284014701843
+    }
+  },
+  "training": {
+    "n_epochs": 50,
+    "final_train_loss": 0.00862249672625861,
+    "final_val_loss": 0.007389128733695192,
+    "best_val_auc": 0.9885512402867906
+  },
+  "model_info": {
+    "n_parameters": 66436,
+    "d_model": 128,
+    "n_head": 4,
+    "d_k": 32,
+    "positional_tau": 10000,
+    "n_features": 52,
+    "sequence_length": 108,
+    "loss_type": "MaskedMultiTaskLoss"
+  },
+  "data_info": {
+    "n_train": 426245,
+    "n_val": 91338,
+    "n_test": 91339,
+    "feature_names": [
+      "B4",
+      "B8",
+      "B8A",
+      "B11",
+      "B12",
+      "NDVI",
+      "EVI",
+      "NDMI",
+      "NBR",
+      "MIRBI",
+      "BSI",
+      "BAIS2",
+      "NDVI_zscore",
+      "EVI_zscore",
+      "NDMI_zscore",
+      "NBR_zscore",
+      "MIRBI_zscore",
+      "BSI_zscore",
+      "BAIS2_zscore",
+      "NDVI_anomaly",
+      "EVI_anomaly",
+      "NDMI_anomaly",
+      "NBR_anomaly",
+      "MIRBI_anomaly",
+      "BSI_anomaly",
+      "BAIS2_anomaly",
+      "lc_prev_forest",
+      "lc_prev_orchards",
+      "lc_prev_shrubland",
+      "lc_prev_grassland",
+      "lc_prev_cropland",
+      "lc_prev_covered_agriculture",
+      "lc_prev_built_up",
+      "lc_prev_bare",
+      "lc_prev_fallow",
+      "lc_prev_water",
+      "lc_curr_forest",
+      "lc_curr_orchards",
+      "lc_curr_shrubland",
+      "lc_curr_grassland",
+      "lc_curr_cropland",
+      "lc_curr_covered_agriculture",
+      "lc_curr_built_up",
+      "lc_curr_bare",
+      "lc_curr_fallow",
+      "lc_curr_water",
+      "delta_NBR",
+      "delta_NDVI",
+      "delta_NDMI",
+      "delta_BAIS2",
+      "month_cos",
+      "month_sin"
+    ],
+    "split_type": "random_stratified"
+  }
+}

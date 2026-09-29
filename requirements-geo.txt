@@ -1,0 +1,18 @@
+# Reproducible environment for the geospatial / polygon workflow (pipeline_10m, supplementary_30m).
+# These are the exact versions the published nb15_* outputs were produced with.
+# Verified run: python 3.13.3 on macOS-26.5.2-arm64-arm-64bit-Mach-O
+#
+#   python3 -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements-nb15.txt
+#   python notebooks/15_polygon_workflow.py
+#
+# pyogrio is geopandas' vector reader for the fire-polygon shapefile.
+
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+matplotlib==3.11.2
+rasterio==1.5.1
+geopandas==1.1.4
+shapely==2.1.2
+pyogrio==0.13.0

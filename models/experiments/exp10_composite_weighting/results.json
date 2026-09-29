@@ -1,0 +1,108 @@
+{
+  "profiles": {
+    "equal": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "severity_dominant": [
+      0.5,
+      0.2,
+      0.2,
+      0.1
+    ],
+    "persistence_dominant": [
+      0.2,
+      0.5,
+      0.2,
+      0.1
+    ],
+    "recovery_gap_dominant": [
+      0.2,
+      0.2,
+      0.5,
+      0.1
+    ],
+    "recurrence_dominant": [
+      0.2,
+      0.2,
+      0.1,
+      0.5
+    ]
+  },
+  "jaccard": {
+    "equal": {
+      "equal": 1.0,
+      "severity_dominant": 0.7830925419757907,
+      "persistence_dominant": 0.7143125293289535,
+      "recovery_gap_dominant": 0.7387910518800571,
+      "recurrence_dominant": 0.7272813238770686
+    },
+    "severity_dominant": {
+      "equal": 0.7830925419757907,
+      "severity_dominant": 1.0,
+      "persistence_dominant": 0.6716390592111284,
+      "recovery_gap_dominant": 0.63191280264451,
+      "recurrence_dominant": 0.6963224368499257
+    },
+    "persistence_dominant": {
+      "equal": 0.7143125293289535,
+      "severity_dominant": 0.6716390592111284,
+      "persistence_dominant": 1.0,
+      "recovery_gap_dominant": 0.5998948935797495,
+      "recurrence_dominant": 0.6942769687413042
+    },
+    "recovery_gap_dominant": {
+      "equal": 0.7387910518800571,
+      "severity_dominant": 0.63191280264451,
+      "persistence_dominant": 0.5998948935797495,
+      "recovery_gap_dominant": 1.0,
+      "recurrence_dominant": 0.5403946702648001
+    },
+    "recurrence_dominant": {
+      "equal": 0.7272813238770686,
+      "severity_dominant": 0.6963224368499257,
+      "persistence_dominant": 0.6942769687413042,
+      "recovery_gap_dominant": 0.5403946702648001,
+      "recurrence_dominant": 1.0
+    }
+  },
+  "spearman": {
+    "equal": {
+      "equal": 1.0,
+      "severity_dominant": 0.9662862488370225,
+      "persistence_dominant": 0.9794966100904795,
+      "recovery_gap_dominant": 0.9660595513138486,
+      "recurrence_dominant": 0.9565009641452414
+    },
+    "severity_dominant": {
+      "equal": 0.9662862488370224,
+      "severity_dominant": 1.0,
+      "persistence_dominant": 0.9362303429967582,
+      "recovery_gap_dominant": 0.8900418522164183,
+      "recurrence_dominant": 0.9486135777595592
+    },
+    "persistence_dominant": {
+      "equal": 0.9794966100904795,
+      "severity_dominant": 0.9362303429967581,
+      "persistence_dominant": 1.0,
+      "recovery_gap_dominant": 0.9554199960123833,
+      "recurrence_dominant": 0.9092941437704043
+    },
+    "recovery_gap_dominant": {
+      "equal": 0.9660595513138486,
+      "severity_dominant": 0.8900418522164184,
+      "persistence_dominant": 0.9554199960123831,
+      "recovery_gap_dominant": 1.0,
+      "recurrence_dominant": 0.86283925920538
+    },
+    "recurrence_dominant": {
+      "equal": 0.9565009641452414,
+      "severity_dominant": 0.9486135777595592,
+      "persistence_dominant": 0.9092941437704044,
+      "recovery_gap_dominant": 0.8628392592053798,
+      "recurrence_dominant": 1.0
+    }
+  }
+}
