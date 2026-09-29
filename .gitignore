@@ -1,6 +1,7 @@
 # ---------------------------------------------------------------- RESTRICTED
 # Third-party research data. Never commit. See data/README.md.
-data/restricted/
+data/restricted/*
+!data/restricted/README.md
 **/fire_reference_inventory*
 **/fig_gt_fires.*
 **/landcover_2018*.tif
