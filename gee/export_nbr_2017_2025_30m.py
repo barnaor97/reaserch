@@ -1,5 +1,5 @@
 """
-export_nbr_2017_2025_30m.py — the four OBSERVATIONAL layers, exported programmatically.
+export_nbr_2017_2025_30m.py - the four OBSERVATIONAL layers, exported programmatically.
 
 Exports, on the exact validated 30 m inference grid:
     NBR_2017_mean        mean NBR over the VALID monthly observations of 2017
@@ -13,7 +13,7 @@ only. It is deliberately NOT the numerator itself: compute_targets() averaged an
 (04_data_prep.ipynb cell 9 fills gaps with a global per-calendar-month mean), which Earth Engine
 cannot and should not reproduce.
 
-PROVENANCE — every choice traced to the original pipeline:
+PROVENANCE - every choice traced to the original pipeline:
   collection    COPERNICUS/S2_SR_HARMONIZED, bands B4,B8,B8A,B11,B12   01_data_to_gee cell 15
   cloud mask    CLOUD_SCORE_PLUS/V1/S2_HARMONIZED, cs_cdf >= 0.60      01_data_to_gee cells 2, 15
   spatial mask  human infrastructure rasterised, inverted               01_data_to_gee cell 9

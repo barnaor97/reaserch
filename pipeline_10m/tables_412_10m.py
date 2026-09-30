@@ -1,4 +1,3 @@
-import os
 """Regenerate Tables 21 and 22 of Section 4.12 on the final 10 m grid.
 Definitions are unchanged; only the grid changes (cells of 10 m, unit floor 36 cells = 0.36 ha)."""
 import json, os, numpy as np, pandas as pd, geopandas as gpd, rasterio

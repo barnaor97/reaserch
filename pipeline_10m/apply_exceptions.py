@@ -1,4 +1,3 @@
-import os
 """Force documented exception cells to NoData in ALL five layers of their tile file.
 This keeps the five valid-data footprints identical and removes the spurious
 model_recurrence = 0.0 that arises from (NaN > threshold) being False."""

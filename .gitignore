@@ -23,7 +23,7 @@ data/external/
 *.dbf
 *.sbn
 *.sbx
-!data/roi/fig_roi_polygon.*
+!data/thesis_maps/fig_roi_polygon.*
 
 # Model weights (see README - redistribution pending)
 *.pt

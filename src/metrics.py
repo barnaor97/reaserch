@@ -3,8 +3,8 @@ Evaluation helpers and metric computation for the restoration prioritization
 project. Used by Notebooks 05, 06, and 07 to produce comparable result
 artefacts across the main model and all robustness experiments.
 
-v3 additions:
-    * per_lc_stats — mean predicted scores grouped by land-cover class,
+This module provides:
+    * per_lc_stats - mean predicted scores grouped by land-cover class,
       complementing per_category_stats which groups by recurrence category.
 """
 

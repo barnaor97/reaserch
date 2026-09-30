@@ -1,4 +1,3 @@
-import os
 """Mosaic the per-tile predictions into the final 10 m rasters in a SINGLE pass.
 Direct aligned window placement: no resampling, no interpolation, no seam averaging.
 Tiles are disjoint by construction, so every cell is written exactly once."""

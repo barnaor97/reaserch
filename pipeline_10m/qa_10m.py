@@ -1,4 +1,3 @@
-import os
 """Inference QA gate for the 10 m candidate mosaic. Read-only."""
 import hashlib, json, os, sys
 import numpy as np, rasterio

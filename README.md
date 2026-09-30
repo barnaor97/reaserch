@@ -13,7 +13,7 @@ Publicly available satellite and environmental inputs can be retrieved programma
 ### Reproducible from public sources alone
 
 - Sentinel-2 L2A retrieval and Cloud Score+ cloud/shadow masking through Google Earth Engine (`gee/`).
-- WorldClim 2.1 and SRTM retrieval and the Figure 3 environmental-setting map (`figures/22_study_area_environment.py`) — this runs end to end with no restricted input.
+- WorldClim 2.1 and SRTM retrieval and the Figure 3 environmental-setting map (`figures/22_study_area_environment.py`) - this runs end to end with no restricted input.
 - The complete analytical workflow as source code, including the model architecture, training procedure, target definitions and the final 10 m pipeline.
 
 ### Requires authorized third-party input
@@ -31,9 +31,9 @@ Concretely:
 | Sentinel-2 L2A, Cloud Score+ | public | retrieved via Google Earth Engine by `gee/` |
 | WorldClim 2.1 (BIO12) | public | downloaded automatically by `figures/22_study_area_environment.py` |
 | SRTM GL1 | public | downloaded automatically by `figures/22_study_area_environment.py` |
-| Region-of-interest polygon | included | `data/roi/` |
-| **Fire-reference inventory** (KKL/JNF + Planet/Sentinel-2 scars) | **restricted** | request from the provider; place in `data/restricted/` |
-| **Project land-cover product** (2018 baseline) | **restricted** | request from the research group; place in `data/restricted/` |
+| Region-of-interest polygon | included | `data/thesis_maps/fig_roi_polygon.shp` |
+| **Fire-reference inventory** (KKL/JNF + Planet/Sentinel-2 scars) | **restricted** | request from the provider; place at `data/thesis_maps/fig_gt_fires.shp` |
+| **Project land-cover product** (2018 baseline) | **restricted** | request from the research group; place at `data/raw/landcover_2018_30m.tif` |
 
 See [`data/README.md`](data/README.md) for the full manifest, expected schemas and file paths.
 
@@ -43,7 +43,7 @@ This repository does not redistribute the fire-reference inventory or the land-c
 
 ## The canonical workflow
 
-**The final regional analysis in the thesis is the 10 m workflow (`pipeline_10m/`).** An earlier 30 m implementation is retained in `supplementary_30m/` **only** because a small number of explicitly labelled supplementary diagnostics in the thesis appendix were produced with it. The 30 m pipeline is *not* the final regional analysis and should not be read as such.
+**The final regional analysis in the thesis is the 10 m workflow (`pipeline_10m/`).** An earlier 30 m implementation is retained in `supplementary_30m/` because several results in the thesis were produced with it: the labelled appendix diagnostics, the Section 4.12 tables, and the polygon-level analyses whose outputs are the `nb11_*` and `nb12_*` tables. It is kept so that every committed table has its generating code. The 30 m pipeline is *not* the final regional analysis and should not be read as such.
 
 ```
   public Sentinel-2 / Cloud Score+  ─┐
@@ -59,7 +59,14 @@ This repository does not redistribute the fire-reference inventory or the land-c
                                              ↓
                     evaluation, robustness, baselines, sensitivity       notebooks/06, 06b
                                              ↓
-                        FINAL 10 m regional inference                    pipeline_10m/
+                    ┌────────────────────────┴────────────────────────┐
+                    ↓                                                 ↓
+      FINAL 10 m regional inference            earlier 30 m full-ROI inference
+                 pipeline_10m/                   supplementary_30m/07a-07c
+                    ↓                                                 ↓
+                    │                        appendix diagnostics, §4.12 tables,
+                    │                        nb11/nb12 polygon analyses
+                    ↓
                                              ↓
    restricted land-cover (2018 baseline) ──→ burned spatial units        pipeline_10m/
                                              ↓
@@ -81,14 +88,14 @@ Key parameters are preserved exactly as used in the thesis: fire-detection opera
 | `configs/` | `config.py`, feature names, fitted scaler, train/val/test split indices |
 | `src/` | model definitions (L-TAE and baselines), evaluation metrics |
 | `gee/` | Earth Engine assembly and the per-pixel time-series export |
-| `notebooks/` | data preparation, training, experiments, feature importance, target diagnostics |
+| `notebooks/` | data preparation, training, experiments, feature importance, target diagnostics, per-land-cover indicator table |
 | `pipeline_10m/` | **final** 10 m inference, spatial units, land-cover analysis, RIS, figures/tables |
-| `supplementary_30m/` | earlier 30 m workflow, retained for labelled appendix diagnostics only |
+| `supplementary_30m/` | earlier 30 m workflow: the full-ROI inference chain (`07a`-`07c`), the polygon-level analyses behind the `nb11`/`nb12` tables, and the labelled appendix diagnostics |
 | `figures/` | Figure 3 environmental-setting map (fully public inputs) |
 | `verification/` | independent recomputation of reported values |
-| `models/` | training history, results JSON, per-experiment metrics (no weights — see below) |
+| `models/` | training history, results JSON, per-experiment metrics (no weights - see below) |
 | `outputs/` | aggregate result tables reproduced in the thesis, plus run provenance |
-| `data/` | ROI polygon; README manifest; empty `restricted/` placeholder |
+| `data/` | ROI polygon (`thesis_maps/`); README manifest; empty `restricted/` placeholder |
 
 ---
 
@@ -113,14 +120,14 @@ earthengine authenticate
 
 Scripts resolve the repository root automatically; override with `THESIS_ROOT` if needed.
 
-Stages that need no restricted data — `figures/22_study_area_environment.py` and the public parts of `gee/` — run immediately. Everything downstream of burned-label construction requires the restricted inputs described in `data/README.md`.
+Stages that need no restricted data - `figures/22_study_area_environment.py` and the public parts of `gee/` - run immediately. Everything downstream of burned-label construction requires the restricted inputs described in `data/README.md`.
 
 ---
 
 ## What this repository does not contain
 
 - The fire-reference inventory and the project land-cover product (restricted third-party data).
-- Any derived file from which those datasets could be reconstructed — notably per-pixel coordinates paired with fire-history labels, per-unit tables carrying coordinates, and the burned-label arrays. These were screened out; see `docs/table_screening.json`.
+- Any derived file from which those datasets could be reconstructed - notably per-pixel coordinates paired with fire-history labels, per-unit tables carrying coordinates, and the burned-label arrays. These were screened out; see `docs/table_screening.json`.
 - The ~13.7 GB scaled feature matrix `X_scaled.npy`. It is a deterministic product of the documented pipeline and is regenerated by `notebooks/04_data_prep.ipynb`; it is not archived.
 - Trained model weights. No pretrained checkpoints are distributed here.
 

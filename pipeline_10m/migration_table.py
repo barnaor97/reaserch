@@ -1,4 +1,3 @@
-import os
 """30 m vs 10 m migration comparison. Reads only finished artifacts from both analyses."""
 import json, os
 import numpy as np, pandas as pd

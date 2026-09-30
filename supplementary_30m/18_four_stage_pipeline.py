@@ -1,5 +1,5 @@
 """
-18_four_stage_pipeline.py — where between-land-cover relationships change along the pipeline.
+18_four_stage_pipeline.py - where between-land-cover relationships change along the pipeline.
 
 Supersedes nothing: nb16 and nb17 stay on disk as the sampled-support diagnostics they were.
 Nothing is retrained, redefined or rebuilt. 15_polygon_workflow.py units are reused, not recreated.

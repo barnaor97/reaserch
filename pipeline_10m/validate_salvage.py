@@ -1,4 +1,3 @@
-import os
 """Validate SALVAGED tile values, not just their footprints.
 
 The 423 salvaged tiles came out of a mosaic left uncleanly closed by kill -9. This selects a

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Figure 15 — two prioritization hierarchies over the same burned spatial units,
+Figure 15 - two prioritization hierarchies over the same burned spatial units,
 regenerated from the FINAL 10 m analysis.
 
 The published Figure 15 image was rendered by the earlier 30 m implementation

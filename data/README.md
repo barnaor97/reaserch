@@ -6,13 +6,21 @@ Expected local layout:
 
 ```
 data/
-  roi/                 fig_roi_polygon.*          included in this repository
-  restricted/          <- you supply these; git-ignored
-    fire_reference_inventory.shp (+ .shx .dbf .prj .cpg)
-    landcover_2018.tif
-  external/            <- auto-downloaded public rasters (git-ignored)
-  raw/  processed/     <- generated intermediates (git-ignored)
+  thesis_maps/
+    fig_roi_polygon.*        included in this repository
+    fig_gt_fires.*           <- you supply; the fire-reference inventory; git-ignored
+  raw/
+    landcover_2018_30m.tif   <- you supply; the land-cover product; git-ignored
+    ...                      generated intermediates (git-ignored)
+  external/                  auto-downloaded public rasters (git-ignored)
+  processed/                 generated intermediates (git-ignored)
 ```
+
+**These are the paths the code actually opens.** They are historical filenames,
+kept because renaming them would change the scripts rather than the documentation.
+`fig_gt_fires` is the fire-reference inventory and `fig_roi_polygon` is the region
+of interest; the names are retained for consistency with the thesis figures, not
+because the fire polygons are ground truth (see section 2.1).
 
 ---
 
@@ -22,7 +30,7 @@ data/
 | | |
 |---|---|
 | Collection | `COPERNICUS/S2_SR_HARMONIZED` (Google Earth Engine) |
-| Temporal range | 2016-01-01 – 2025-12-31 (2016 used **only** to build the seasonal baseline; the model input sequence is 2017-01 – 2025-12, 108 months) |
+| Temporal range | 2016-01-01 - 2025-12-31 (2016 used **only** to build the seasonal baseline; the model input sequence is 2017-01 - 2025-12, 108 months) |
 | Bands retained | B4 (red, 10 m), B8 (NIR, 10 m), B8A (red-edge, 20 m), B11 (SWIR-1, 20 m), B12 (SWIR-2, 20 m) |
 | Grid | EPSG:32636, origin 620610 / 3514560, 10 m; 4875 × 7794 cells |
 | Resampling | the three 20 m bands are **resampled** (not aggregated) to the 10 m grid using Earth Engine's default nearest-neighbour at a 10 m request scale; they carry 20 m native information |
@@ -38,14 +46,14 @@ data/
 | Citation | Google Earth Engine (2023), Cloud Score+ S2_HARMONIZED |
 | Redistribution | not redistributed; retrieved via GEE |
 
-### WorldClim 2.1 — annual precipitation (BIO12)
+### WorldClim 2.1 - annual precipitation (BIO12)
 | | |
 |---|---|
 | File | `data/external/ISR_wc2.1_30s_bio.tif`, band **12** (`wc2.1_30s_bio_12`) |
 | URL | `https://geodata.ucdavis.edu/climate/worldclim/2_1/tiles/iso/ISR_wc2.1_30s_bio.tif` |
 | SHA-256 | `7b755de4828ca25f5850474833171e197c131c6787edb17655d9c21a45a5570f` |
 | CRS / resolution | EPSG:4326, 30 arc-seconds (0.00833333°) |
-| Citation | Fick, S.E. & Hijmans, R.J. (2017). *Int. J. Climatology* 37(12), 4302–4315 (the citation specified by WorldClim for version 2.1) |
+| Citation | Fick, S.E. & Hijmans, R.J. (2017). *Int. J. Climatology* 37(12), 4302-4315 (the citation specified by WorldClim for version 2.1) |
 | Downloaded by | `figures/22_study_area_environment.py` (automatic) |
 | Redistribution | not redistributed; download from source |
 
@@ -63,14 +71,14 @@ data/
 ### Region of interest
 | | |
 |---|---|
-| File | `data/roi/fig_roi_polygon.shp` (+ `.shx .dbf .prj .cpg`) — **included** |
+| File | `data/thesis_maps/fig_roi_polygon.shp` (+ `.shx .dbf .prj .cpg`) - **included** |
 | CRS | EPSG:4326; 1 polygon, 2016 vertices; 1,936.2 km² (EPSG:32636) |
 | SHA-256 (`.shp`) | `3aecc6da1a408c88f67d2a595d17365541d8cff1f2c9c9bdf5943476162cb738` |
 | Consumed by | `figures/22_study_area_environment.py`, `pipeline_10m/*` |
 
 ---
 
-## 2. Restricted datasets — not redistributed
+## 2. Restricted datasets - not redistributed
 
 ### 2.1 Fire-reference inventory
 
@@ -78,23 +86,23 @@ Merged KKL/JNF fire records and Planet/Sentinel-2-derived burn scars (3,596 poly
 
 Throughout the thesis and this repository it is called the **fire-reference inventory**. It is *not* independently validated ground truth: the Planet/Sentinel-2 polygons are themselves remote-sensing derived, and the KKL polygons supplied the classification training labels. (The label "Ground-truth fire polygons" appears once, inside a retained legacy appendix figure, and is explained as such in the thesis.)
 
-**Expected file:** `data/restricted/fire_reference_inventory.shp` (+ `.shx .dbf .prj .cpg`), or any vector format readable by `geopandas`.
+**Expected file:** `data/thesis_maps/fig_gt_fires.shp` (+ `.shx .dbf .prj .cpg`). This is the path every script opens; `geopandas` reads it, so any equivalent vector format works if the scripts are pointed at it.
 
 **Expected CRS:** EPSG:4326 (reprojected internally to EPSG:32636).
 
-**Required schema** — only these fields are used:
+**Required schema** - only these fields are used:
 
 | field | type | meaning |
 |---|---|---|
 | `geometry` | Polygon / MultiPolygon | burned area extent |
 | `fire_year` | int | year of the fire event |
-| `fire_month` | int (1–12) | month of the fire event |
+| `fire_month` | int (1-12) | month of the fire event |
 | `fire_date` | int (epoch ms) or date | event date; used to assign the burned month |
 | `Source` | str | provenance of the polygon, e.g. `Planet`, `Sentinel-2` |
 
 Other attributes present in the original inventory are unused.
 
-**How it is used:** polygons are rasterised onto the analysis grid per month to produce the per-pixel-per-month burned label `y_burned`; pixels are stratified by fire recurrence (number of months intersecting a polygon) into no-fires / low (1–2) / medium (3–4) / high (5+); and the reference-defined burned footprint is dissolved into the spatial units used in the regional analysis.
+**How it is used:** polygons are rasterised onto the analysis grid per month to produce the per-pixel-per-month burned label `y_burned`; pixels are stratified by fire recurrence (number of months intersecting a polygon) into no-fires / low (1-2) / medium (3-4) / high (5+); and the reference-defined burned footprint is dissolved into the spatial units used in the regional analysis.
 
 **Stages that cannot run without it:** burned-label construction; sample construction and stratification; the severity and persistence targets (which are defined over documented fire months); model training; all fire-detection evaluation; the reference-defined spatial units and every reference-population result.
 
@@ -104,7 +112,7 @@ A ten-class land-cover product developed within the research group by **Nitzan H
 
 **Third-party research data. Not included in this repository.**
 
-**Expected file:** `data/restricted/landcover_2018.tif` (single band, integer).
+**Expected file:** `data/raw/landcover_2018_30m.tif` (single band, integer) for the 30 m workflow. The 10 m pipeline builds its own aligned copy in `pipeline_10m/build_10m_sources.py`.
 
 **Expected CRS / grid:** EPSG:32636, aligned to the analysis grid. The final analysis uses it at 10 m (4875 × 7794); the supplementary 30 m workflow uses a 30 m version (1625 × 2598).
 
@@ -120,7 +128,7 @@ A ten-class land-cover product developed within the research group by **Nitzan H
 
 `0` is treated as nodata/outside.
 
-**Role:** the **fixed 2018 baseline** is used for all downstream spatial analysis, so that land-cover class is held constant across the study period. It is also supplied to the model as 20 one-hot features (current and previous year). Because no land-cover map exists for 2016–2017, the 2018 map is used as a proxy for those years — least reliable in croplands.
+**Role:** the **fixed 2018 baseline** is used for all downstream spatial analysis, so that land-cover class is held constant across the study period. It is also supplied to the model as 20 one-hot features (current and previous year). Because no land-cover map exists for 2016-2017, the 2018 map is used as a proxy for those years - least reliable in croplands.
 
 **Stages that cannot run without it:** the 20 land-cover features; spatial-unit construction (units are connected components of burned footprint × land-cover class); all per-land-cover results; within-class RIS prioritization.
 
@@ -131,12 +139,12 @@ A ten-class land-cover product developed within the research group by **Nitzan H
 | File | Size | Generated by | Note |
 |---|---|---|---|
 | `data/raw/full_pixels_10m.csv` | large | `gee/02_sampling_computepixels.ipynb` | per-pixel monthly time series for the sample; **restricted-derived** (the sample is defined by the fire inventory) |
-| `data/processed/X_scaled.npy` | ~13.7 GB | `notebooks/04_data_prep.ipynb` | 608,922 × 108 × 52 scaled features; deterministic — regenerate, do not archive |
+| `data/processed/X_scaled.npy` | ~13.7 GB | `notebooks/04_data_prep.ipynb` | 608,922 × 108 × 52 scaled features; deterministic - regenerate, do not archive |
 | `data/processed/y_burned.npy` | 263 MB | `notebooks/04_data_prep.ipynb` | burned labels; **restricted-derived** |
 | `data/processed/targets_aux.npz` | 9.3 MB | `notebooks/04_data_prep.ipynb` | the four analytical indicators; **restricted-derived** |
 | `data/processed/X_scaled_meta.csv` | 13 MB | `notebooks/04_data_prep.ipynb` | pixel_id, fire-history class, dominant land cover; **restricted-derived** |
 | `data/raw/pixel_coords_10m.csv` | 32 MB | `gee/02_sampling_computepixels.ipynb` | coordinates + fire-history class; **restricted-derived** |
 | `outputs/inference_10m/*.tif` | ~610 MB | `pipeline_10m/run_inference_10m.py` | final indicator surfaces |
-| `outputs/**/units*.csv`, `*.gpkg` | — | `pipeline_10m/polygon_10m.py`, `geometries_10m.py` | per-unit tables/geometries; **restricted-derived** |
+| `outputs/**/units*.csv`, `*.gpkg` | - | `pipeline_10m/polygon_10m.py`, `geometries_10m.py` | per-unit tables/geometries; **restricted-derived** |
 
-**Committed** are `configs/scaler.pkl`, `configs/splits.json`, `configs/feature_names.json` — the fitted scaler, the train/val/test index lists and the feature order. These carry no coordinates, labels or geometry.
+**Committed** are `configs/scaler.pkl`, `configs/splits.json`, `configs/feature_names.json` - the fitted scaler, the train/val/test index lists and the feature order. These carry no coordinates, labels or geometry.

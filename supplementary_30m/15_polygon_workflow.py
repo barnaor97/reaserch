@@ -1,5 +1,5 @@
 """
-15_polygon_workflow.py — the consolidated burned-spatial-unit (polygon-level) workflow.
+15_polygon_workflow.py - the consolidated burned-spatial-unit (polygon-level) workflow.
 
 Supersedes the exploratory 11_polygon_landcover_analysis.py and 12_branchA_polygon_analysis.py,
 both of which used definitions the repository audit rejected:

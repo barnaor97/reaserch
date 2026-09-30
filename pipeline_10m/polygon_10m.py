@@ -1,4 +1,3 @@
-import os
 """Polygon / spatial-unit analysis rebuilt on the aligned 10 m grid.
 
 Authoritative logic follows 15_polygon_workflow.py (unit formation, rankings) and

@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Final 10 m regional workflow — run from the repository root.
+# Final 10 m regional workflow - run from the repository root.
 #
 #   bash pipeline_10m/run_pipeline.sh
 #
 # Requires the restricted inputs to be present (see data/README.md):
-#   data/restricted/fire_reference_inventory.*
-#   data/restricted/landcover_2018.*
+#   data/thesis_maps/fig_gt_fires.*      fire-reference inventory
+#   data/raw/landcover_2018_30m.tif      land-cover product
 # and the 10 m inference tiles to have been produced by run_inference_10m.py.
 set -euo pipefail
 ROOT="${THESIS_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"

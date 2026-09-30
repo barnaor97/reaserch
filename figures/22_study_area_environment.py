@@ -1,14 +1,12 @@
-import os
 # -*- coding: utf-8 -*-
 """
-Study-area environmental context figure for Section 3.2.1 (supervisor comment: stronger
-map + environmental characterisation).
+Study-area environmental context figure for Section 3.2.1.
 
 Two panels over the identical extent, both clipped to the thesis ROI polygon:
   (a) mean annual precipitation, WorldClim 2.1 bio_12   (Fick & Hijmans, 2017)
   (b) elevation, SRTM GL1 1 arc-second                  (Farr et al., 2007)
 
-Reuses the ROI and data lineage of notebooks/09_revision_verification.py
+Reuses the ROI and data lineage of verification/09_revision_verification.py
 (nb09_t04 bbox, nb09_t06 WorldClim 2.1, nb09_t07 SRTM 30 m). Nothing existing is modified;
 this script only reads external rasters and writes a new figure + a stats table.
 

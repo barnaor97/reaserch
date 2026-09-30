@@ -6,8 +6,8 @@ All architectural choices follow Sainte Fare Garnot & Landrieu (2020),
 adapted for pixel-level multi-task regression rather than parcel-level
 classification.
 
-v3 additions:
-    * MaskedMultiTaskLoss — a variant of MultiTaskLoss in which the three
+This module provides:
+    * MaskedMultiTaskLoss - a variant of MultiTaskLoss in which the three
       regression heads only receive gradient from pixels that experienced
       at least one fire in the fire-reference inventory. This reflects the thesis's
       research goal (quantifying post-fire dynamics) and prevents the
@@ -255,7 +255,7 @@ class MultiTaskLoss(nn.Module):
 class MaskedMultiTaskLoss(nn.Module):
     """Combined loss with regression heads masked to burned pixels only.
 
-    The v3 loss reflects the research goal: the thesis quantifies
+    The loss reflects the research goal: the thesis quantifies
     post-fire dynamics, so severity, persistence, and recovery_gap only
     have a meaningful interpretation only on pixels that actually
     burned. Non-burned pixels have zero targets for these dimensions

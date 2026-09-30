@@ -1,9 +1,9 @@
 """
-10_revision_figures.py — regenerate Figures 1, 2 and 6 for the final revision.
+10_revision_figures.py - regenerate Figures 1, 2 and 6 for the final revision.
 
 Figure 6 provenance. The published Figure 6 was produced by Notebook 03 cell 28,
 which averaged NBR in a +/-12-month window around every documented fire event
-belonging to `df["pixel_id"].unique()[:500]` — the 500 lowest-numbered burned
+belonging to `df["pixel_id"].unique()[:500]` - the 500 lowest-numbered burned
 pixels in a frame sorted by pixel_id. That yields 511 qualifying fire events
 from 476 pixels, exactly the n printed on the published figure, so the figure is
 fully reproducible. The 500-pixel cap was a performance shortcut in an
@@ -94,8 +94,8 @@ if __name__ == '__main__':
 
 
 # ---------------------------------------------------------------------------
-# Figure 1 — the framework, drawn so that the five epistemic layers of
-# Section 3.1 are visually separated (supervisor comments C51 and C53).
+# Figure 1 - the framework, drawn so that the five epistemic layers of
+# Section 3.1 are visually separated.
 # Stage 2 appears only as a footnote annotation, not as a major box.
 # ---------------------------------------------------------------------------
 LAYERS = [
@@ -246,13 +246,13 @@ def fig01():
 
 
 # ---------------------------------------------------------------------------
-# Figure 2 — study area. Four panels: a locator placing the region of interest
+# Figure 2 - study area. Four panels: a locator placing the region of interest
 # relative to Israel, the Gaza Strip and Egypt; the existing 2025 land-cover
 # classification, carried over unchanged; mean annual precipitation showing the
 # north-south gradient; and relief. Every environmental value shown is the one
 # already verified in Section 3.2.1 and reproduced by
 # notebooks/09_revision_verification.py (tables nb09_t04, nb09_t06, nb09_t07).
-# Supervisor comment C87.
+
 # ---------------------------------------------------------------------------
 BBOX = (34.2672, 31.0574, 34.7820, 31.7495)     # W, S, E, N  (nb09_t04)
 NE_SHP = os.environ.get('NE_ADMIN0', '')        # ne_10m_admin_0_countries

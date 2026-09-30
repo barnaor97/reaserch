@@ -19,11 +19,11 @@ Rationale:
     definition used at training time.
 
 Output:
-    ~/thesisv4/outputs/inference_full_roi/model_recurrence_30m.tif
+    outputs/inference_full_roi/model_recurrence_30m.tif
 
 Prerequisites:
-    - Trained model at ~/thesisv4/models/main/model_main.pt
-    - Feature stack at ~/thesisv4/data/raw/feature_stack_v4_30m/
+    - Trained model at models/main/model_main.pt
+    - Feature stack at data/raw/feature_stack_30m/
     - Same environment as Notebook 07b (config.py, model_defs.py on path)
 
 Estimated runtime:
@@ -147,7 +147,7 @@ model_recurrence = np.full((H, W), np.nan, dtype=np.float32)
 
 
 # ------------------------------------------------------------
-# 7. Block-wise inference — only recurrence is computed
+# 7. Block-wise inference - only recurrence is computed
 # ------------------------------------------------------------
 print("Loading 108 monthly feature rasters...")
 feature_stack = []

@@ -1,15 +1,18 @@
-# Restricted inputs — place your authorized copies here
+# Restricted inputs - place your authorized copies here
 
-This directory is intentionally empty and is git-ignored.
+This directory is intentionally empty and is git-ignored. It is kept as a
+reminder that this repository is not self-contained.
 
 The thesis depends on two third-party research datasets that are **not
-redistributed** by this repository. Obtain authorized copies and place them
-here with these names:
+redistributed** here. Obtain authorized copies and place them at the paths the
+scripts open:
 
-    data/restricted/fire_reference_inventory.shp   (+ .shx .dbf .prj .cpg)
-    data/restricted/landcover_2018.tif
+    data/thesis_maps/fig_gt_fires.shp   (+ .shx .dbf .prj .cpg)   fire-reference inventory
+    data/raw/landcover_2018_30m.tif                               land-cover product
 
-Required formats, CRS, schemas, class codes and the exact role each plays in
-the workflow are documented in ../README.md (sections 2.1 and 2.2).
+Both paths are git-ignored, so a stray copy cannot be committed by accident.
 
-Do not commit anything in this directory.
+Required formats, CRS, schemas, class codes and the exact role each dataset plays
+in the workflow are documented in ../README.md (sections 2.1 and 2.2).
+
+Do not commit any restricted data anywhere in this repository.

@@ -1,5 +1,5 @@
 """
-export_landcover_2018_30m.py — the one Earth Engine export Notebook 14 needs.
+export_landcover_2018_30m.py - the one Earth Engine export Notebook 14 needs.
 
 Exports the 2018 image of landcover_smoothed_yearly, aggregated to 30 m by
 (area-weighted) mode, on exactly the grid of outputs/inference_full_roi/*_30m.tif:
@@ -7,7 +7,7 @@ EPSG:32636, 30 m pixels, upper-left corner (620610, 3514560), 1625 columns x 259
 Nothing else is built or exported.
 
 Run:   python notebooks/export_landcover_2018_30m.py
-Then:  download landcover_2018_30m.tif from Drive folder "thesisv4_exports" to
+Then download landcover_2018_30m.tif from the configured Drive export folder to
        data/raw/landcover_2018_30m.tif and re-run notebooks/14_landuse_presentation.ipynb
        (its §2 verifies the grid alignment before anything uses the layer).
 """

@@ -1,5 +1,5 @@
 """
-20_unit_geometries_and_replacement_maps.py — geometry materialization + replacement Figures 10 and 11.
+20_unit_geometries_and_replacement_maps.py - geometry materialization + replacement Figures 10 and 11.
 
 VISUALISATION AND EXPORT ONLY. No scientific quantity is recomputed here:
   * the burned masks, connected components, 2018 land-cover intersection and 0.36 ha floor are

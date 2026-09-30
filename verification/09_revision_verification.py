@@ -1,5 +1,5 @@
 """
-09_revision_verification.py — reproduce every number introduced during the
+09_revision_verification.py - reproduce every number introduced during the
 final scientific revision, from the stored arrays in data/processed/.
 
 Writes outputs/tables/nb09_*.md and .csv so that each figure quoted in the

@@ -1,6 +1,5 @@
-import os
 """
-figures_10m.py (ported from 21_final_figures_10_11.py; only grid constants and paths differ) — FINAL publication-quality replacement Figures 10 and 11.
+figures_10m.py (ported from 21_final_figures_10_11.py; only grid constants and paths differ) - FINAL publication-quality replacement Figures 10 and 11.
 
 Deterministic plotting from the verified research outputs only. No scientific quantity is
 recomputed: unit construction is re-derived with the authoritative rules and ASSERTED identical to

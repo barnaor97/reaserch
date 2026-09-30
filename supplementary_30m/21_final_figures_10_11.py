@@ -1,5 +1,5 @@
 """
-21_final_figures_10_11.py — FINAL publication-quality replacement Figures 10 and 11.
+21_final_figures_10_11.py - FINAL publication-quality replacement Figures 10 and 11.
 
 Deterministic plotting from the verified research outputs only. No scientific quantity is
 recomputed: unit construction is re-derived with the authoritative rules and ASSERTED identical to

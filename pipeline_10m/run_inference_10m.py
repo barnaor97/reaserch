@@ -102,7 +102,8 @@ def compute(img, names, g, tries=6):
 TD = os.path.join(OUT, "tiles"); os.makedirs(TD, exist_ok=True)
 # Per-tile outputs are written as standalone files and mosaicked in a single pass afterwards.
 # Incremental in-place updates of a compressed GeoTIFF are not crash-safe: a hard kill during
-# GDAL's tile-directory rewrite silently dropped 197 previously written tiles.
+# Write each tile to a temporary file and rename it into place, so an interrupted
+# run cannot leave a partially written tile behind.
 
 man = json.load(open(MAN)) if os.path.exists(MAN) else {
     "grid": GRID, "tile": TILE, "months": T, "features": NF,

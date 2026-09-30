@@ -1,23 +1,23 @@
 """
-Configuration for the Western Negev restoration prioritization project.
+Central configuration for the Western Negev restoration prioritization study.
 
-This is the run_v4 configuration:
+Every path, feature definition, target definition and hyperparameter used by the
+thesis is declared here so that the notebooks and pipeline scripts share one
+source of truth.
 
-Changes from v3.5:
-    - Sample expanded from 29,681 to 608,922 pixels (final thesis sample):
-        * All 300,032 low_recurrence pixels (was 13,000)
-        * All 4,050 medium_recurrence pixels (was ~3,358)
-        * All 379 high_recurrence pixels (was 323)
-        * 304,461 no_fires (was 13,000), matching burned 1:1
-    - recovery_gap target formula corrected: no_fire pixels now receive
-      recovery_gap=0 (previously ~0.30 due to a formula bug that measured
-      the 12-month baseline vs 12-month recent NBR difference for all
-      pixels, including those that never burned).
-    - Auto-detects Colab vs local (Linux + GPU). Paths adapt automatically.
-    - Batch size raised from 64 to 256 to leverage the RTX 4090
-      when running locally (Colab T4 falls back to 64).
-    - Features, model architecture, and loss function are unchanged from v3.5
-      to enable direct comparison as thesis baseline.
+Sample design. The modelling sample contains 608,922 pixels: all burned pixels
+of every recurrence stratum (300,032 low, 4,050 medium, 379 high) plus 304,461
+pixels with no documented fire, drawn to match the burned class 1:1 at the pixel
+level. Retaining all burned pixels preserves the rare high-recurrence cases; the
+1:1 match balances the pixel-level classes but not the monthly classification
+target, where burned pixel-months remain a small minority.
+
+Targets. recovery_gap is defined only for pixels with at least one documented
+fire month and is set to 0 elsewhere, so that pixels which never burned do not
+contribute a spurious recovery deficit.
+
+Environment. Colab and local Linux/GPU runs are detected automatically and the
+paths and batch size adapt accordingly.
 """
 
 import json
@@ -33,7 +33,7 @@ import torch
 # -----------------------------------------------------------
 IS_COLAB = "google.colab" in sys.modules
 
-# Workspace root — picks Drive path in Colab and local disk otherwise.
+# Workspace root - picks Drive path in Colab and local disk otherwise.
 if IS_COLAB:
     DRIVE_ROOT = "/content/drive/MyDrive/thesisv4"
 else:
@@ -119,7 +119,7 @@ GEE = {
     "ic_baseline_std":    f"{GEE_ASSET_ROOT}/seasonal_baseline_std_2016_2017{VERSION}",
 }
 
-# Names for v4 inference outputs — kept distinct from v3.5 assets.
+# Names of the regional inference outputs written back to Earth Engine.
 GEE_OUTPUT_ASSETS = {
     "severity":     f"{GEE_ASSET_ROOT}/severity_v4_30m",
     "persistence":  f"{GEE_ASSET_ROOT}/persistence_v4_30m",
@@ -130,7 +130,7 @@ GEE_OUTPUT_ASSETS = {
 
 
 # -----------------------------------------------------------
-# Spatial settings (unchanged from v3)
+# Analysis grid, projection and region of interest.
 # -----------------------------------------------------------
 SCALE      = 10
 CRS        = "EPSG:32636"
@@ -138,7 +138,8 @@ MAX_PIXELS = 1e13
 
 
 # -----------------------------------------------------------
-# Time range (unchanged from v3)
+# Monthly model input sequence. The 2016 imagery is used only to build the
+# seasonal reference baseline and is not part of the input sequence.
 # -----------------------------------------------------------
 START_YEAR  = 2017
 START_MONTH = 1
@@ -175,7 +176,7 @@ EXPECTED_T = len(get_month_list())
 
 
 # -----------------------------------------------------------
-# Feature schema — 52 features (unchanged from v3.5)
+# Per-month feature schema: 52 values per pixel per month.
 # -----------------------------------------------------------
 RAW_BANDS = ["B4", "B8", "B8A", "B11", "B12"]
 
@@ -196,7 +197,8 @@ HARMONIC_FEATURES = ["month_cos", "month_sin"]
 
 
 # -----------------------------------------------------------
-# Land cover (unchanged from v3)
+# Land-cover classes of the project land-cover product, used both as model
+# features and as the fixed 2018 baseline for the spatial-unit analysis.
 # -----------------------------------------------------------
 LC_CATEGORIES = {
     10: "forest",
@@ -218,7 +220,7 @@ LC_FEATURES      = LC_FEATURES_PREV + LC_FEATURES_CURR
 
 
 # -----------------------------------------------------------
-# Full model feature list — 52 features (unchanged from v3.5)
+# Ordered feature list consumed by the model; the order defines the input axis.
 # -----------------------------------------------------------
 MODEL_FEATURES = (
     RAW_BANDS
@@ -235,7 +237,7 @@ ALL_FEATURES = (RAW_BANDS + INDICES + QUALITY_BANDS + ANOMALY_BANDS +
 
 
 # -----------------------------------------------------------
-# Pixel-type category names (unchanged from v3)
+# Fire-recurrence strata used to build the sample.
 # -----------------------------------------------------------
 PIXEL_TYPES = [
     "no_fires",
@@ -253,7 +255,8 @@ PIXEL_TYPE_LEGACY_MAP = {
 
 
 # -----------------------------------------------------------
-# Sampling strategy — v4 uses ALL burned pixels + matched no_fires
+# Sampling strategy: keep every burned pixel and match with an equal number
+# of pixels that have no documented fire.
 # -----------------------------------------------------------
 SAMPLING = {
    "n_no_fires":        304461,
@@ -264,7 +267,7 @@ SAMPLING = {
    }
 
 # -----------------------------------------------------------
-# Model hyperparameters (unchanged from v3.5)
+# L-TAE architecture and optimisation settings.
 # -----------------------------------------------------------
 MODEL = {
     "d_model":        128,
@@ -276,7 +279,8 @@ MODEL = {
 
 
 # -----------------------------------------------------------
-# Loss weights (unchanged from v3.5)
+# Relative weighting of the classification head and the three regression heads
+# in the masked multi-task loss.
 # -----------------------------------------------------------
 LOSS = {
     "focal_alpha": 0.75,
@@ -302,7 +306,7 @@ TRAINING = {
 
 
 # -----------------------------------------------------------
-# Splits (unchanged from v3)
+# Train / validation / test partition of the pixel sample.
 # -----------------------------------------------------------
 SPLITS = {
     "train_frac": 0.70,

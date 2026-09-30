@@ -1,5 +1,5 @@
 """
-19_finalize_polygon_thesis_outputs.py — consolidate the validated analysis into thesis-ready outputs.
+19_finalize_polygon_thesis_outputs.py - consolidate the validated analysis into thesis-ready outputs.
 
 Writes ONLY into outputs/final_polygon_thesis/. Reads everything else read-only. No model is
 retrained, no target array or RIS formula is touched, no thesis file is opened, and nb15/nb16/
@@ -352,7 +352,7 @@ print("all classes: spearman(analytical RG, predicted RG) = %.4f" % rho_rg_pred)
 cs = pd.read_csv(NB18_COMPLETE_SUM)
 cs.to_csv(os.path.join(OUT, "table_observation_completeness_sensitivity.csv"), index=False)
 
-# ------------------------------------------------------------------ 7. FIGURE 1 — the Tarin map
+# ------------------------------------------------------------------ 7. FIGURE 1 - the Tarin map
 roi = gpd.read_file(ROI).to_crs(CRS)
 extent = [GRID_T.c, GRID_T.c + W * GRID_T.a, GRID_T.f + H * GRID_T.e, GRID_T.f]
 
@@ -402,7 +402,7 @@ for ext in ("png", "pdf"):
 plt.close(fig)
 print("\nwrote figure_polygon_priority_reference_vs_model.{png,pdf}")
 
-# ------------------------------------------------------------------ 8. FIGURE 2 — the two hierarchies
+# ------------------------------------------------------------------ 8. FIGURE 2 - the two hierarchies
 fig, axes = plt.subplots(1, 2, figsize=(14.2, 7.0), sharex=True, layout="constrained")
 hier_rows = []
 for ax, pop in zip(axes, ["reference", "model"]):
@@ -467,7 +467,7 @@ print("\nwrote figure_global_vs_within_landcover_priority.{png,pdf}")
 print("reference units hidden by the global ranking (top decile within class, below global cut): %d across %d classes"
       % (int(obsc_ref.high_within_class_but_below_global_cut_n.sum()), len(obsc_ref)))
 
-# ------------------------------------------------------------------ 9. FIGURE 3 — processing stages
+# ------------------------------------------------------------------ 9. FIGURE 3 - processing stages
 msk_s = np.asarray(np.load(os.path.join(P, "X_scaled_mask.npy"), mmap_mode="r"))
 a17 = np.asarray(nbr_s[:n_s, :12], dtype=np.float64); a25 = np.asarray(nbr_s[:n_s, 96:108], dtype=np.float64)
 m17, m25 = msk_s[:n_s, :12].astype(bool), msk_s[:n_s, 96:108].astype(bool)

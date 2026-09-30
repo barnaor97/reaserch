@@ -1,5 +1,5 @@
 """
-stream_extract_nbr.py — extract the NBR columns from a remote X_scaled.npy.
+stream_extract_nbr.py - extract the NBR columns from a remote X_scaled.npy.
 
 Same job as extract_nbr_arrays.py, but reads the tensor over HTTP instead of
 from a local file, so it never needs 13.7 GB of free disk. Use this when
@@ -121,7 +121,7 @@ def main():
               flush=True)
 
     # np.save appends ".npy" unless the path already ends in it, so name the
-    # checkpoints accordingly — otherwise a resume looks for a file that was
+    # checkpoints accordingly - otherwise a resume looks for a file that was
     # never written under that name and silently restarts from zero.
     part_paths = {n: os.path.join(out_dir, WANTED[n] + ".part.npy") for n in wanted}
     done_records = 0
@@ -211,7 +211,7 @@ def main():
     # Tolerance note. X_scaled stores standardized float32, so recovering the raw
     # value costs a round-trip of a few ULPs. The recovery gap divides by
     # |baseline NBR|, whose sample mean is only ~0.085, so that tiny absolute
-    # error is amplified — and amplified most where the baseline is smallest.
+    # error is amplified - and amplified most where the baseline is smallest.
     # Per-pixel agreement at 1e-4 is therefore the wrong bar; agreement at 1e-2,
     # rank correlation, and class means are what any downstream analysis uses.
     print("\nverification — stored targets rebuilt from the extracted columns:")

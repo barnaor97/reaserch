@@ -1,5 +1,5 @@
 """
-17_landcover_spectral_interpretation.py — observed spectral change vs the analytical indicator
+17_landcover_spectral_interpretation.py - observed spectral change vs the analytical indicator
 vs the model prediction, by fixed 2018 baseline land-cover class.
 
 NOTHING IS CHANGED. The trained model, the targets, the Recovery Gap definition, the RIS

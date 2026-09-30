@@ -1,7 +1,7 @@
 """
-extract_nbr_arrays.py — pull the raw spectral columns out of X_scaled.npy.
+extract_nbr_arrays.py - pull the raw spectral columns out of X_scaled.npy.
 
-Run this ONCE on the workstation that holds ~/thesisv4/data/processed/X_scaled.npy
+Run once on the machine that holds data/processed/X_scaled.npy
 (the ~13.7 GB feature tensor). It writes three small arrays that let every
 recovery-gap diagnostic run on a laptop:
 
@@ -10,11 +10,11 @@ recovery-gap diagnostic run on a laptop:
     data/processed/ndvi_raw.npy         (608922, 108) float32   ~263 MB
 
 Why these three:
-  * NBR        — the channel the recovery-gap and (via its z-score) the
+  * NBR - the channel the recovery-gap and (via its z-score) the
                  severity and persistence targets are built from.
-  * NBR_zscore — the channel severity and persistence are built from
+  * NBR_zscore - the channel severity and persistence are built from
                  directly; needed for the persistence-threshold sensitivity.
-  * NDVI       — an independent vegetation index. If the land-cover ordering
+  * NDVI - an independent vegetation index. If the land-cover ordering
                  of the recovery gap appears in NBR but not in NDVI, the
                  ordering is a property of the index rather than of vegetation
                  recovery. This is the cheapest available cross-check on the
@@ -36,7 +36,7 @@ Reading is chunked over pixels so peak memory stays near 250 MB regardless
 of how large X_scaled is; the file is opened read-only and never modified.
 
 Usage:
-    cd ~/thesisv4 && python notebooks/extract_nbr_arrays.py
+    python gee/extract_nbr_arrays.py
 """
 
 import json
